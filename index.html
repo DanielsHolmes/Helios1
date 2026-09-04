@@ -148,8 +148,12 @@
             color: #fff;
             background: var(--navy-2);
         }
-        .hero-bg {
+        .hero-bg,
+        .hero-video {
             position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center;
             background-size: cover;
             background-position: center;
         }
@@ -714,7 +718,9 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="top">
-        <div class="hero-bg" style="background-image:url('assets/townhouses.jpg')"></div>
+        <video class="hero-video" autoplay muted loop playsinline poster="assets/townhouses.jpg">
+            <source src="assets/hero-timelapse.mp4" type="video/mp4">
+        </video>
         <div class="hero-overlay"></div>
         <div class="hero-main">
             <div class="container">
