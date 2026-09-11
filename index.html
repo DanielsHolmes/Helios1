@@ -256,101 +256,238 @@
             .process-left { position: static; }
         }
 
-        /* ---------- Loan Programs (portfolio list) ---------- */
-        .loans-head { max-width: 820px; margin-bottom: 48px; }
+        /* ---------- Loan Programs (.intro--cards stacking interaction) ---------- */
+        .loans-head { max-width: 820px; margin-bottom: 56px; }
         .sec-heading { max-width: 820px; margin-bottom: 56px; }
-        .deals-wrap { margin-top: 60px; }
-        .deal-panel {
-            margin-top: 110px;
-            background: var(--cream);
-            will-change: transform;
-        }
-        .deal-panel:first-child { margin-top: 0; }
-        .deal-panel .thumb {
-            overflow: hidden;
+
+        .intro-cards-wrap {
             position: relative;
-            aspect-ratio: 3 / 1;
-            background: var(--cream-2);
+            width: 100%;
+            margin-top: 20px;
         }
-        .deal-panel .thumb img {
+
+        .intro--cards {
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .cards {
+            width: 100%;
+            position: relative;
+        }
+
+        .card-wrapper {
+            width: 100%;
+            perspective: 600px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .card-wrapper:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-blank {
+            width: 100%;
+            height: 480px;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-direction: column;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 20px 48px -12px rgba(13, 27, 40, 0.28);
+            position: relative;
+            color: #FFFFFF;
+            will-change: transform;
+            background: var(--navy);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            display: block;
             object-fit: cover;
-            transition: transform 700ms var(--ease);
+            filter: contrast(1.08) brightness(0.72);
+            transition: filter 0.4s ease;
+            will-change: transform;
         }
-        .deal-panel:hover .thumb img { transform: scale(1.04); }
 
-        .deal-panel .content-items {
-            margin-top: 16px;
+        .card-wrapper:hover .card-image {
+            filter: contrast(1.1) brightness(0.82);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 2;
+            padding: clamp(28px, 4vw, 48px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(10, 21, 32, 0.25) 0%, rgba(10, 21, 32, 0.45) 38%, rgba(10, 21, 32, 0.94) 88%, rgba(10, 21, 32, 0.98) 100%);
+            box-sizing: border-box;
+        }
+
+        .card-top {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 40px;
-        }
-        .deal-panel .content-items .tt-cat {
-            font-size: 13px;
-            color: var(--muted);
-        }
-        .deal-panel .content-items .tt-title {
-            font-family: var(--serif);
-            font-size: 20px;
-            font-weight: 500;
-            margin-top: 4px;
-            color: var(--navy);
-            line-height: 1.15;
-        }
-        .deal-panel .content-items .tt-title a {
-            background-position: 0 95%;
-            background-repeat: no-repeat;
-            background-size: 0% 2px;
-            transition: background-size 0.4s ease, color 0.4s ease;
-        }
-        .deal-panel .content-items .tt-title a:hover {
-            color: var(--gold-2);
-            background-size: 100% 2px;
-            background-image: linear-gradient(180deg, var(--gold-2) 0%, var(--gold-2) 100%);
-        }
-        .deal-panel .content-items .meta-items {
-            display: flex;
-            align-items: center;
-            gap: 64px;
+            width: 100%;
         }
 
-        .ref-text-btn {
+        .card-tag {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            font-size: 17px;
-            font-weight: 500;
+            padding: 6px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: rgba(13, 27, 40, 0.75);
+            border: 1px solid rgba(243, 159, 14, 0.45);
+            border-radius: 100px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .card-number {
             font-family: var(--serif);
-            font-style: italic;
-            color: var(--navy);
-            letter-spacing: -0.02em;
-            text-decoration: underline;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            width: 100%;
+        }
+
+        .card-title {
+            font-family: var(--serif);
+            font-size: clamp(26px, 3.2vw, 38px);
+            font-weight: 600;
+            line-height: 1.15;
+            color: #FFFFFF;
+            margin: 0;
+        }
+
+        .card-title a {
+            color: #FFFFFF;
+            transition: color 0.3s ease;
+        }
+
+        .card-title a:hover {
+            color: var(--gold);
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px clamp(24px, 4vw, 56px);
+        }
+
+        .card-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .card-meta-item .meta-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #9FB0BC;
+        }
+
+        .card-meta-item .meta-val {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 500;
+            color: #F4EFE6;
+        }
+
+        .card-action-btn {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gold);
+            padding: 10px 22px;
+            border-radius: 100px;
+            background: rgba(243, 159, 14, 0.12);
+            border: 1px solid rgba(243, 159, 14, 0.35);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            transition: all 0.35s var(--ease);
             white-space: nowrap;
         }
-        .ref-text-btn .txt {
-            position: relative;
-            display: inline-block;
-            height: 1.25em;
-            overflow: hidden;
-        }
-        .ref-text-btn .txt .t-default,
-        .ref-text-btn .txt .t-hover {
-            display: block;
-            transition: transform 0.4s ease;
-        }
-        .ref-text-btn .txt .t-hover {
-            position: absolute;
-            left: 0; top: 100%;
-        }
-        .ref-text-btn:hover .txt .t-default { transform: translateY(-120%); }
-        .ref-text-btn:hover .txt .t-hover { transform: translateY(-120%); }
-        .ref-text-btn .arr { transition: transform 0.4s ease; }
-        .ref-text-btn:hover .arr { transform: translateX(4px); }
 
-        .loans-cta { text-align: center; margin-top: 64px; }
+        .card-action-btn .arr {
+            transition: transform 0.35s var(--ease);
+        }
+
+        .card-action-btn:hover {
+            background: var(--gold);
+            color: var(--navy);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px -4px rgba(243, 159, 14, 0.55);
+        }
+
+        .card-action-btn:hover .arr {
+            transform: translateX(4px);
+        }
+
+        .card-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold) 0%, rgba(243, 159, 14, 0.25) 60%, transparent 100%);
+            border-radius: 2px;
+            margin-top: 4px;
+        }
+
+        .loans-cta { text-align: center; margin-top: 72px; }
+
+        @media (max-width: 991px) {
+            .card-blank {
+                height: 420px;
+            }
+            .card-meta {
+                gap: 16px 28px;
+            }
+            .card-action-btn {
+                margin-left: 0;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-blank {
+                height: auto;
+                min-height: 400px;
+            }
+            .card-content {
+                padding: 24px 20px;
+            }
+            .card-meta-item .meta-val {
+                font-size: 16px;
+            }
+        }
 
         /* ---------- Case Study ---------- */
         .case-wrap {
@@ -648,9 +785,6 @@
             .about-grid { grid-template-columns: 1fr; }
             .case-inner { grid-template-columns: 1fr; }
             .footer-top { grid-template-columns: 1fr 1fr; }
-            .deal-panel .content-items { flex-wrap: wrap; gap: 24px; }
-            .deal-panel .content-items .meta-items { gap: 48px; }
-            .deal-panel { margin-top: 90px; }
         }
         @media (max-width: 820px) {
             .nav { display: none; }
@@ -672,7 +806,6 @@
         }
         @media (max-width: 560px) {
             .footer-top { grid-template-columns: 1fr; }
-            .deal-panel { margin-top: 60px; }
             .container { padding: 0 22px; }
         }
     </style>
@@ -791,145 +924,163 @@
     <section class="section" id="loans">
         <div class="container">
             <h2 class="display loans-head">Capital for the Way Real Estate Investors<br>Actually Operate</h2>
-            <div class="deals-wrap">
-                <div class="deal-panel">
-                    <div class="thumb">
-                        <img class="img-main" src="assets/townhouses.jpg" alt="Ground-Up Construction">
-                    </div>
-                    <div class="content-items">
-                        <div class="title-content">
-                            <p class="tt-cat">Ground-Up</p>
-                            <h3 class="tt-title"><a href="#submit">Ground-Up Construction</a></h3>
-                        </div>
-                        <div class="meta-items">
-                            <div class="title-content">
-                                <p class="tt-cat">Best For</p>
-                                <h3 class="tt-title">Builders &amp; Developers</h3>
-                            </div>
-                            <div class="title-content">
-                                <p class="tt-cat">Stage</p>
-                                <h3 class="tt-title">Land → Completion</h3>
-                            </div>
-                        </div>
-                        <a href="#submit" class="ref-text-btn">
-                            <span class="txt">
-                                <span class="t-default">Explore Ground-Up Financing</span>
-                                <span class="t-hover">Explore Ground-Up Financing</span>
-                            </span>
-                            <span class="arr">→</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="deal-panel">
-                    <div class="thumb">
-                        <img class="img-main" src="assets/interior.webp" alt="Fix &amp; Flip">
-                    </div>
-                    <div class="content-items">
-                        <div class="title-content">
-                            <p class="tt-cat">Fix &amp; Flip</p>
-                            <h3 class="tt-title"><a href="#submit">Fix &amp; Flip</a></h3>
-                        </div>
-                        <div class="meta-items">
-                            <div class="title-content">
-                                <p class="tt-cat">Best For</p>
-                                <h3 class="tt-title">Investors</h3>
-                            </div>
-                            <div class="title-content">
-                                <p class="tt-cat">Stage</p>
-                                <h3 class="tt-title">Acquire → Exit</h3>
+            <div class="intro-cards-wrap">
+                <div class="intro--cards">
+                    <div class="cards">
+                        <!-- Ground-Up Construction -->
+                        <div class="card-wrapper">
+                            <div class="card-blank">
+                                <img class="card-image" src="assets/townhouses.jpg" alt="Ground-Up Construction">
+                                <div class="card-content">
+                                    <div class="card-top">
+                                        <span class="card-tag">Ground-Up</span>
+                                        <div class="card-number">01</div>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <h3 class="card-title"><a href="#submit">Ground-Up Construction</a></h3>
+                                        <div class="card-meta">
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Best For</span>
+                                                <span class="meta-val">Builders &amp; Developers</span>
+                                            </div>
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Stage</span>
+                                                <span class="meta-val">Land → Completion</span>
+                                            </div>
+                                            <a href="#submit" class="card-action-btn">
+                                                <span>Explore Ground-Up Financing</span>
+                                                <span class="arr">→</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-line"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a href="#submit" class="ref-text-btn">
-                            <span class="txt">
-                                <span class="t-default">Explore Fix &amp; Flip Financing</span>
-                                <span class="t-hover">Explore Fix &amp; Flip Financing</span>
-                            </span>
-                            <span class="arr">→</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="deal-panel">
-                    <div class="thumb">
-                        <img class="img-main" src="assets/about.webp" alt="DSCR Rental Loans">
-                    </div>
-                    <div class="content-items">
-                        <div class="title-content">
-                            <p class="tt-cat">DSCR</p>
-                            <h3 class="tt-title"><a href="#submit">DSCR Rental Loans</a></h3>
-                        </div>
-                        <div class="meta-items">
-                            <div class="title-content">
-                                <p class="tt-cat">Best For</p>
-                                <h3 class="tt-title">Rental Investors</h3>
-                            </div>
-                            <div class="title-content">
-                                <p class="tt-cat">Stage</p>
-                                <h3 class="tt-title">Stabilized Rentals</h3>
-                            </div>
-                        </div>
-                        <a href="#submit" class="ref-text-btn">
-                            <span class="txt">
-                                <span class="t-default">Explore DSCR Loans</span>
-                                <span class="t-hover">Explore DSCR Loans</span>
-                            </span>
-                            <span class="arr">→</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="deal-panel">
-                    <div class="thumb">
-                        <img class="img-main" src="assets/city.webp" alt="Bridge Loans">
-                    </div>
-                    <div class="content-items">
-                        <div class="title-content">
-                            <p class="tt-cat">Bridge</p>
-                            <h3 class="tt-title"><a href="#submit">Bridge Loans</a></h3>
-                        </div>
-                        <div class="meta-items">
-                            <div class="title-content">
-                                <p class="tt-cat">Best For</p>
-                                <h3 class="tt-title">Timing-Sensitive Deals</h3>
-                            </div>
-                            <div class="title-content">
-                                <p class="tt-cat">Stage</p>
-                                <h3 class="tt-title">Transition</h3>
+
+                        <!-- Fix & Flip -->
+                        <div class="card-wrapper">
+                            <div class="card-blank">
+                                <img class="card-image" src="assets/interior.webp" alt="Fix &amp; Flip">
+                                <div class="card-content">
+                                    <div class="card-top">
+                                        <span class="card-tag">Fix &amp; Flip</span>
+                                        <div class="card-number">02</div>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <h3 class="card-title"><a href="#submit">Fix &amp; Flip</a></h3>
+                                        <div class="card-meta">
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Best For</span>
+                                                <span class="meta-val">Investors</span>
+                                            </div>
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Stage</span>
+                                                <span class="meta-val">Acquire → Exit</span>
+                                            </div>
+                                            <a href="#submit" class="card-action-btn">
+                                                <span>Explore Fix &amp; Flip Financing</span>
+                                                <span class="arr">→</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-line"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a href="#submit" class="ref-text-btn">
-                            <span class="txt">
-                                <span class="t-default">Explore Bridge Financing</span>
-                                <span class="t-hover">Explore Bridge Financing</span>
-                            </span>
-                            <span class="arr">→</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="deal-panel">
-                    <div class="thumb">
-                        <img class="img-main" src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80" alt="Multi-Family">
-                    </div>
-                    <div class="content-items">
-                        <div class="title-content">
-                            <p class="tt-cat">Multi-Family</p>
-                            <h3 class="tt-title"><a href="#submit">Multi-Family</a></h3>
-                        </div>
-                        <div class="meta-items">
-                            <div class="title-content">
-                                <p class="tt-cat">Best For</p>
-                                <h3 class="tt-title">Portfolio Owners</h3>
+
+                        <!-- DSCR Rental Loans -->
+                        <div class="card-wrapper">
+                            <div class="card-blank">
+                                <img class="card-image" src="assets/about.webp" alt="DSCR Rental Loans">
+                                <div class="card-content">
+                                    <div class="card-top">
+                                        <span class="card-tag">DSCR</span>
+                                        <div class="card-number">03</div>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <h3 class="card-title"><a href="#submit">DSCR Rental Loans</a></h3>
+                                        <div class="card-meta">
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Best For</span>
+                                                <span class="meta-val">Rental Investors</span>
+                                            </div>
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Stage</span>
+                                                <span class="meta-val">Stabilized Rentals</span>
+                                            </div>
+                                            <a href="#submit" class="card-action-btn">
+                                                <span>Explore DSCR Loans</span>
+                                                <span class="arr">→</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-line"></div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="title-content">
-                                <p class="tt-cat">Stage</p>
-                                <h3 class="tt-title">Acquire / Refinance</h3>
+                        </div>
+
+                        <!-- Bridge Loans -->
+                        <div class="card-wrapper">
+                            <div class="card-blank">
+                                <img class="card-image" src="assets/city.webp" alt="Bridge Loans">
+                                <div class="card-content">
+                                    <div class="card-top">
+                                        <span class="card-tag">Bridge</span>
+                                        <div class="card-number">04</div>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <h3 class="card-title"><a href="#submit">Bridge Loans</a></h3>
+                                        <div class="card-meta">
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Best For</span>
+                                                <span class="meta-val">Timing-Sensitive Deals</span>
+                                            </div>
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Stage</span>
+                                                <span class="meta-val">Transition</span>
+                                            </div>
+                                            <a href="#submit" class="card-action-btn">
+                                                <span>Explore Bridge Financing</span>
+                                                <span class="arr">→</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-line"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a href="#submit" class="ref-text-btn">
-                            <span class="txt">
-                                <span class="t-default">Explore Multi-Family Financing</span>
-                                <span class="t-hover">Explore Multi-Family Financing</span>
-                            </span>
-                            <span class="arr">→</span>
-                        </a>
+
+                        <!-- Multi-Family -->
+                        <div class="card-wrapper">
+                            <div class="card-blank">
+                                <img class="card-image" src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1600&q=80" alt="Multi-Family">
+                                <div class="card-content">
+                                    <div class="card-top">
+                                        <span class="card-tag">Multi-Family</span>
+                                        <div class="card-number">05</div>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <h3 class="card-title"><a href="#submit">Multi-Family</a></h3>
+                                        <div class="card-meta">
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Best For</span>
+                                                <span class="meta-val">Portfolio Owners</span>
+                                            </div>
+                                            <div class="card-meta-item">
+                                                <span class="meta-label">Stage</span>
+                                                <span class="meta-val">Acquire / Refinance</span>
+                                            </div>
+                                            <a href="#submit" class="card-action-btn">
+                                                <span>Explore Multi-Family Financing</span>
+                                                <span class="arr">→</span>
+                                            </a>
+                                        </div>
+                                        <div class="card-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1024,37 +1175,37 @@
                     <div class="award-item approach-box">
                         <div class="left-text">
                             <span>Acquire</span>
-                            <p>Fix + Flip / Bridge</p>
+                            <p>Land, Residential &amp; Bridge</p>
                         </div>
-                        <span class="text-2">Enter the deal with the right short-term capital.</span>
+                        <span class="text-2">Secure raw land, building lots, or existing properties with agile acquisition and bridge capital.</span>
                     </div>
                     <div class="award-item approach-box">
                         <div class="left-text">
-                            <span>Build or Improve</span>
-                            <p>Ground-Up / Rehab</p>
+                            <span>Build or Renovate</span>
+                            <p>Ground-Up &amp; Fix + Flip / Rehab</p>
                         </div>
-                        <span class="text-2">Fund construction and renovation from the ground up.</span>
+                        <span class="text-2">Fund ground-up construction from the dirt or execute light to heavy property renovations and value-add rehabs.</span>
                     </div>
                     <div class="award-item approach-box">
                         <div class="left-text">
                             <span>Stabilize</span>
-                            <p>Lease-Up / Transition</p>
+                            <p>Lease-Up &amp; Asset Positioning</p>
                         </div>
-                        <span class="text-2">Carry the asset through lease-up and transition.</span>
+                        <span class="text-2">Carry the property through completion, tenant lease-up, and optimal market positioning.</span>
                     </div>
                     <div class="award-item approach-box">
                         <div class="left-text">
-                            <span>Refinance</span>
-                            <p>DSCR / Multifamily</p>
+                            <span>Refinance or Sell</span>
+                            <p>DSCR Long-Term or Capital Exit</p>
                         </div>
-                        <span class="text-2">Move into long-term financing built on performance.</span>
+                        <span class="text-2">Transition into long-term cash-flow rental financing (DSCR) or capture profits upon project sale.</span>
                     </div>
                     <div class="award-item approach-box">
                         <div class="left-text">
-                            <span>Repeat</span>
+                            <span>Repeat &amp; Scale</span>
                             <p>Next Acquisition or Development</p>
                         </div>
-                        <span class="text-2">Roll forward into the next opportunity.</span>
+                        <span class="text-2">Reinvest equity and momentum forward into your next deal or larger portfolio expansion.</span>
                     </div>
                 </div>
             </div>
@@ -1322,34 +1473,68 @@
                 render();
             }
 
-            // Portfolio stack effect (panels pin & scale as you scroll)
-            if (window.gsap && window.ScrollTrigger && document.querySelector('.deals-wrap')) {
+            // Loan Programs Stacking Cards (.intro--cards interaction like dwpinterics.com)
+            if (window.gsap && window.ScrollTrigger && document.querySelector('.intro--cards')) {
                 gsap.registerPlugin(ScrollTrigger);
                 ScrollTrigger.config({ ignoreMobileResize: true });
+
                 const mm = gsap.matchMedia();
 
-                mm.add('(min-width: 1199px)', () => {
-                    const sections = document.querySelectorAll('.deal-panel');
-                    const wrap = document.querySelector('.deals-wrap');
-                    if (!sections.length || !wrap) return;
+                mm.add('(min-width: 768px)', () => {
+                    const cardsWrappers = gsap.utils.toArray('.intro--cards .card-wrapper');
+                    const cards = gsap.utils.toArray('.intro--cards .card-blank');
+                    const cardImages = gsap.utils.toArray('.intro--cards .card-image');
+                    const cardContents = gsap.utils.toArray('.intro--cards .card-content');
 
-                    gsap.set(sections, { scale: 1, transformOrigin: 'center top' });
+                    cardsWrappers.forEach((wrapper, i) => {
+                        const card = cards[i];
+                        const image = cardImages[i];
+                        const content = cardContents[i];
 
-                    sections.forEach((section, index) => {
-                        const isLast = index === sections.length - 1;
-                        gsap.to(section, {
-                            scale: isLast ? 1 : 0.8,
+                        // Stacking scale and 3D perspective rotation matching dwpinterics
+                        const scale = 0.96;
+                        const rotation = -5;
+
+                        // Entrance animation for each card
+                        gsap.from(card, {
+                            y: 30,
+                            opacity: 0,
+                            duration: 0.6,
+                            delay: i * 0.08,
+                            ease: 'power2.out',
+                        });
+
+                        // Card pin & stacking animation
+                        gsap.to(card, {
+                            scale: scale,
+                            rotationX: rotation,
+                            transformOrigin: 'top center',
                             ease: 'none',
                             scrollTrigger: {
-                                trigger: section,
-                                start: 'top 14%',
-                                end: 'bottom 90%',
-                                scrub: true,
-                                pin: true,
+                                trigger: wrapper,
+                                start: 'top ' + (90 + 12 * i),
+                                end: 'bottom 450',
+                                endTrigger: '.intro--cards',
+                                scrub: 0.5,
+                                pin: wrapper,
                                 pinSpacing: false,
-                                endTrigger: wrap,
-                                anticipatePin: 1,
-                                markers: false,
+                                id: 'loan-card-' + (i + 1),
+                                onUpdate: (self) => {
+                                    if (self.isActive) {
+                                        if (image) {
+                                            const zoomAmount = 1 + self.progress * 0.15;
+                                            gsap.set(image, {
+                                                scale: zoomAmount,
+                                                y: self.progress * -15,
+                                            });
+                                        }
+                                        if (content) {
+                                            gsap.set(content, {
+                                                y: self.progress * -8,
+                                            });
+                                        }
+                                    }
+                                },
                             },
                         });
                     });
@@ -1357,7 +1542,11 @@
                     ScrollTrigger.refresh();
 
                     return () => {
-                        ScrollTrigger.getAll().forEach(t => t.kill());
+                        ScrollTrigger.getAll().forEach(t => {
+                            if (t.vars && t.vars.id && String(t.vars.id).startsWith('loan-card-')) {
+                                t.kill();
+                            }
+                        });
                     };
                 });
             }
