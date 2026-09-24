@@ -54,6 +54,12 @@ Fields:
 
 * Phone 
 
+* Estimated FICO
+
+* Purchase Price
+
+* Expected Value
+
 **CTA:**
 
 **Get My Construction Quote**
@@ -68,6 +74,8 @@ Microcopy:
 
 ![][image1]
 
+*Rates Starting at 8.75%+ | Up to 90% LTC | No Bank Statements Needed | No Appraisal Option Available*
+
 ---
 
 **PROGRAM SNAPSHOT:**
@@ -80,23 +88,32 @@ SFR, Condos, Townhomes, 2–4 Units
 **Loan Amount**  
 $250K–$5MM
 
+**Rate**  
+Starting at 8.75%+ (Interest-Only, No Prepayment Penalty)
+
 **Term**  
 12–24 Months
 
-**Initial LTC**  
-Up to 75% permitted / 60% unpermitted
+**Leverage**  
+Up to 90% LTC (Permitted: Up to 75% Initial LTC | Unpermitted: Up to 60% Initial LTC | Lot Acquisition: Up to 75%)
 
 **Construction / Rehab**  
-Up to 100%
-
-**Maximum LTV**  
-Up to 75%
+Up to 100% of Construction Costs
 
 **Maximum LTARV**  
 Up to 70%
 
+**Appraisal Options**  
+No Appraisal Option Available / AMC Appraisal Required
+
+**Documentation**  
+No Bank Statements Needed
+
+**Draw Turnaround**  
+24–48 Hour Draw Inspections & Disbursements
+
 **Minimum FICO**  
-640
+640 (Lower FICO on Exception)
 
 **Foreign Nationals**  
 Eligible
@@ -163,7 +180,15 @@ CTA:
 
 **Do you finance first-time Ground-Up borrowers?**
 
-Experience is an important underwriting factor, but Helios1 Capital evaluates the complete borrower and transaction. A limited track record in one area does not automatically define the entire opportunity.
+Yes. First-time builders can qualify when partnering with an experienced General Contractor (GC) or builder. Helios1 Capital evaluates the complete borrower profile and transaction structure.
+
+**What appraisal options are available for ground-up construction?**
+
+We offer both a streamlined No Appraisal Option and traditional AMC Appraisal options depending on the project scope, location, and borrower qualifications.
+
+**Are bank statements required to qualify?**
+
+No bank statements needed. We underwrite the asset, project budget, and feasibility rather than requiring traditional personal or business bank statements.
 
 **Can construction costs be financed?**
 
@@ -171,7 +196,7 @@ Eligible programs may provide up to 100% of qualifying construction costs, subje
 
 **Do you finance projects before permits are issued?**
 
-Permitted and unpermitted projects may be considered, with different leverage requirements.
+Permitted and unpermitted projects may be considered, with different leverage requirements (up to 75% LTC permitted, up to 60% unpermitted).
 
 **Are foreign nationals eligible?**
 
@@ -179,7 +204,7 @@ Yes, eligible foreign national borrowers may be considered.
 
 **How quickly can I receive terms?**
 
-Once we have enough information to evaluate the transaction, our team can move quickly to determine whether the deal fits and discuss potential terms.
+Pre-approvals are issued within 24 hours once project details and scope are submitted. Draw requests are typically processed within 24–48 hours.
 
 ---
 
@@ -241,7 +266,10 @@ For real estate investors acquiring residential properties to renovate, repositi
 
 Name  
 Email  
-Phone
+Phone  
+Estimated FICO  
+Purchase Price  
+Expected Value  
 
 **CTA:**
 
@@ -253,13 +281,13 @@ Phone
 
 **![][image2]**
 
+*Rates Starting at 8.75%+ | Up to 90% LTC (100% on Exception) | 100% Rehab Funding | No Bank Statements Needed | No Appraisal Option Available*
+
 ---
 
 **PROGRAM SNAPSHOT:**
 
-**Flexible Financing for Rehab Strategies**
-
-**Standard Fix & Flip**
+**Fix & Flip Financing at a Glance**
 
 **Eligible Properties**  
 SFR, Condo, Townhome, 2–4 Units
@@ -267,53 +295,35 @@ SFR, Condo, Townhome, 2–4 Units
 **Loan Amount**  
 $100K–$5MM per property
 
-**Term**  
-12–18 Months, extension options available
+**Rate**  
+Starting at 8.75%+ (Interest-Only)
 
-**Maximum LTV**  
-Up to 90% LTV (100% On Exception)
+**Term**  
+12–18 Months (Extension options available)
+
+**Maximum Leverage**  
+Up to 90% LTC (100% on Exception)
 
 **Rehab Funding**  
-Up to 100%
+Up to 100% of Qualifying Rehab Costs
 
 **Maximum ARV**  
-70%–75%
+70%–75% LTARV
+
+**Appraisal Options**  
+No Appraisal Option Available / AMC Appraisal Required
+
+**Documentation**  
+No Bank Statements Needed
+
+**Close Timeline**  
+7–14 Business Days
+
+**Draw Turnaround**  
+24–48 Hour Draw Reimbursements
 
 **Minimum FICO**  
 620+ Mid Score
-
-**Rate**
-
-9.99%+
-
-**Foreign Nationals**
-
-Eligible
-
----
-
-**Heavy Rehab**
-
-**Eligible Properties**  
-Mixed Use and Multifamily, including 5–20 units
-
-**Loan Amount**  
-$250K–$10MM
-
-**Term**  
-12–24 Months
-
-**Maximum LTV**  
-75%–80%
-
-**Rehab Funding**  
-Up to 100%
-
-**Maximum ARV**  
-70%–75%
-
-**Minimum FICO**  
-640
 
 **Foreign Nationals**  
 Eligible
@@ -330,7 +340,7 @@ We look at the purchase, rehab scope, budget, borrower experience, project econo
 
 **Support Different Rehab Profiles**
 
-From straightforward renovations to heavier repositioning strategies, the financing should reflect what the project actually requires.
+From straightforward renovations to comprehensive repositioning strategies, the financing should reflect what the project actually requires.
 
 **Stay Ready for the Next Deal**
 
@@ -366,23 +376,27 @@ Helios1 Capital evaluates the **borrower, business plan, capital structure, risk
 
 **Can you finance renovation costs?**
 
-Yes. Eligible Fix & Flip programs may finance up to 100% of qualifying rehab costs, subject to underwriting.
+Yes. Eligible Fix & Flip programs finance up to 100% of qualifying rehab costs with fast 24–48 hour draw turnaround.
 
-**Do you finance heavy rehab projects?**
+**What appraisal options are available for Fix & Flip?**
 
-Yes. Helios1 Capital offers financing options for both standard Fix & Flip opportunities and heavier rehabilitation or repositioning projects.
+We offer both a fast No Appraisal Option and traditional AMC Appraisal options depending on the scope of work and property qualifications.
+
+**Do I need bank statements to qualify?**
+
+No bank statements needed. Qualification is asset-based, focusing on property value, equity, and the feasibility of your rehab plan.
 
 **What property types are eligible?**
 
-Depending on the program, eligible properties may include SFRs, condos, townhomes, 2–4 units, mixed-use assets, and selected multifamily properties.
+Eligible properties include Single-Family Residences (SFR), condos, townhomes, and 2–4 unit residential properties.
 
 **Are foreign nationals eligible?**
 
-Yes, eligible foreign national borrowers may be considered.
+Yes, eligible foreign national real estate investors may be considered.
 
 **Can I refinance instead of selling after renovation?**
 
-Depending on the stabilized property and borrower qualifications, Helios1 Capital may be able to support a transition into DSCR or another long-term financing solution.
+Depending on the stabilized property and borrower qualifications, Helios1 Capital seamlessly transitions projects into our DSCR long-term rental financing program (rates from 5.75%).
 
 ---
 
@@ -432,11 +446,11 @@ Right side:
 
 **Subheadline:**
 
-**Long-term rental financing based primarily on property cash flow, with rates starting at 5.99% and up to 80% LTV.**
+**Long-term rental financing based primarily on property cash flow, with rates starting at 5.75% and up to 80% LTV (85% on exception).**
 
 **Supporting Copy:**
 
-For investors buying, refinancing, or cash-out refinancing rental properties—from individual units to larger portfolios.
+For investors buying, refinancing, or cash-out refinancing rental properties—from single-asset loans up to $2.5MM to cross-collateralized portfolios up to $3MM (up to 20 properties).
 
 **Form Header:**
 
@@ -444,7 +458,10 @@ For investors buying, refinancing, or cash-out refinancing rental properties—f
 
 Name  
 Email  
-Phone
+Phone  
+Estimated FICO  
+Purchase Price  
+Expected Value  
 
 **CTA:**
 
@@ -456,38 +473,96 @@ Phone
 
 ![][image3]
 
+*Rates Starting at 5.75% | Up to 80% LTV (85% on Exception) | No Tax Returns or W-2s | 30-Year Fixed & Hybrid ARM*
+
 ---
 
-**PROGRAM SNAPSHOT:**
+**PROGRAM SNAPSHOT: SINGLE PROPERTY DSCR**
 
-**DSCR Financing at a Glance**
+**Single Property DSCR Financing at a Glance**
 
 **Eligible Properties**  
-SFR, Condo, Townhome, 2–4 Units, STR portfolios
-
-**Loan Amount**  
-$75k \- $3mm ($2mm Portfolio)
-
-**Term Options**  
-5-, 10-, and 30-Year Fixed or ARM options
+SFR, 2–4 Units, Condo, Townhome, PUD, STR (Case by Case)
 
 **Rate**  
-Starting at 5.99%
+Starting at 5.75%
+
+**Loan Size**  
+$75k – $2.5mm
 
 **Maximum LTV**  
-Up to 80%
+Up to 80% (85% on exception)  
+*Purchase: 80% (85% on exception) | Rate/Term: 80% | Cash-Out: 75% (80% on exception)*
+
+**Minimum DSCR**  
+0.75x (Lower DSCR Case by Case)
+
+**Term Options**  
+30-Year Fixed or Hybrid ARM
+
+**Amortization**  
+Fully Amortizing or Partial Interest-Only
+
+**Minimum FICO**  
+660 (Lower FICO on Exception)
+
+**Minimum Seasoning**  
+None
+
+**Close Timeline**  
+2–3 Weeks
 
 **Income Documentation**  
 No W-2s, paystubs, or tax returns required
 
+**Foreign Nationals**  
+Eligible
+
+---
+
+**PROGRAM SNAPSHOT: PORTFOLIO DSCR**
+
+**Portfolio DSCR Financing at a Glance (Portfolios Up to 20 Properties)**
+
+**Eligible Properties**  
+SFR, 2–4 Units, Condo, Townhome, PUD
+
+**Rate**  
+Starting at 5.75%
+
+**# of Properties**  
+Up to 20 per Portfolio
+
+**Portfolio Loan Size**  
+$100k – $3mm per Portfolio
+
+**Maximum LTV**  
+Up to 80%  
+*Purchase: 80% | Rate/Term: 80% | Cash-Out: 75%*
+
+**Loan Structure**  
+Blanket Loan, One Closing, Cross-Collateralized
+
 **Minimum DSCR**  
-0.75x or higher
+1.00x
+
+**Term Options**  
+30-Year Fixed or Hybrid ARM
+
+**Amortization**  
+Fully Amortizing or Partial Interest-Only
 
 **Minimum FICO**  
 660
 
-**Foreign Nationals**  
-Eligible
+**Minimum Occupancy**  
+90% by Unit Count
+
+**Release Price**  
+1.2x of Allocated Loan Amount/Property
+
+**Close Timeline**  
+4–6 Weeks
 
 ---
 
@@ -535,25 +610,33 @@ Helios1 Capital combines mortgage lending and institutional capital-markets expe
 
 **FAQ**
 
-**Do DSCR loans require tax returns?**
+**Do DSCR loans require tax returns or W-2s?**
 
-The DSCR program is designed around property cash flow and generally does not require W-2s, paystubs, or tax returns for income qualification.
+No. DSCR financing qualifies based on the property’s rental income and debt service coverage rather than personal tax returns, W-2s, or paystubs.
 
-**Can I use DSCR for a refinance or cash-out refinance?**
+**What are the maximum LTV limits for purchases and refinances?**
 
-Yes. Purchase, refinance, and qualifying cash-out transactions may be considered.
+For Single Property DSCR: Purchase loans are available up to 80% LTV (85% on exception), Rate/Term refinances up to 80% LTV, and Cash-Out refinances up to 75% LTV (80% on exception). For Portfolio DSCR: Purchase and Rate/Term refinances are up to 80% LTV, and Cash-Out refinances up to 75% LTV.
 
-**Can I finance more than one rental property?**
+**What is the minimum DSCR ratio required?**
 
-Yes. Helios1 Capital works with investors ranging from individual-property borrowers to larger portfolios, subject to program and underwriting requirements.
+Single Property DSCR loans start at a minimum DSCR of 0.75x (lower DSCR considered case by case). For Portfolio DSCR loans, the minimum DSCR is 1.00x.
 
-**Are short-term rentals eligible?**
+**Can I finance a portfolio of multiple properties together?**
 
-Eligible STR properties may be considered.
+Yes. Our Portfolio DSCR program offers cross-collateralized blanket loans for up to 20 properties per portfolio, with loan amounts from $100K up to $3MM under a single closing. Portfolios require a minimum 90% occupancy by unit count and feature a 1.2x release price per property.
+
+**What are the closing timelines and seasoning requirements?**
+
+Single Property DSCR loans typically close in 2–3 weeks with zero minimum seasoning required. Portfolio DSCR loans typically close in 4–6 weeks.
+
+**What property types and terms are available?**
+
+Eligible properties include Single-Family Residences (SFR), 2–4 unit properties, condominiums, townhomes, PUDs, and Short-Term Rentals (STR case-by-case for single properties). Terms include 30-Year Fixed or Hybrid ARM with Fully Amortizing or Partial Interest-Only options.
 
 **Are foreign nationals eligible?**
 
-Yes, qualifying foreign national investors may be eligible.
+Yes, qualifying foreign national real estate investors may be eligible for DSCR financing.
 
 ---
 
@@ -565,7 +648,7 @@ Get a DSCR structure built around the investment.
 
 **Get My DSCR Quote**
 
-**4\. RENTAL PROPERTIES / DSCR LANDING PAGE**
+**4\. RESIDENTIAL BRIDGE FINANCING LANDING PAGE**
 
 **Logo**
 
@@ -615,7 +698,10 @@ Move on the property now while you execute the longer-term business plan.
 
 Name  
 Email  
-Phone
+Phone  
+Estimated FICO  
+Purchase Price  
+Expected Value  
 
 **CTA**
 
@@ -627,64 +713,46 @@ Phone
 
 ![][image4]
 
+*Rates Starting at 9.49%+ (Fixed) | Up to 85% LTC / 70% LTV | No Bank Statements Needed | Close in as Fast as 10 Days | Asset-Based Underwriting*
+
 ---
 
 **PROGRAM SNAPSHOT:**
 
-**Residential Bridge Financing at a Glance**
+**Stabilized Bridge Financing at a Glance**
 
 **Eligible Properties**  
 SFR, Condo, Townhome, 2–4 Units
 
 **Loan Amount**  
-$100K–$5MM
-
-**Term**  
-12–24 Months, extension options available
+$100K–$3.5MM
 
 **Rate**  
-Starting at 9.99%+
-
-**Maximum LTV**  
-Up to 75%–80% depending on program
-
-**Experience**  
-Programs available with no minimum deal requirement
-
-**Minimum FICO**  
-620+
-
-**Recourse**  
-Full recourse and eligible non-recourse structures available
-
-**Foreign Nationals**  
-Eligible
-
-**Commercial Bridge Financing at a Glance**
-
-**Eligible Properties**  
-Retail, Office, Industrial, Mixed-Use
-
-**Loan Amount**  
-$500K–$10MM+
+Starting at 9.49%+ Fixed
 
 **Term**  
-**12-36 Months**
+12–24 Months (Extension options available)
 
-**Rate**  
-Starting at 9.99%+
+**Maximum Leverage**  
+Up to 85% LTC / 70% LTV
 
-**Maximum LTV**  
-Up to 75%
+**Underwriting Structure**  
+Asset-Based Underwriting
+
+**Documentation**  
+No Bank Statements Needed
+
+**Debt Coverage**  
+1.10x DSCR (if C3 condition)
+
+**Close Timeline**  
+As fast as 10 Days
 
 **Experience**  
-Programs available with no minimum deal requirement
+Flexible — programs available with no minimum deal requirement
 
 **Minimum FICO**  
-640+
-
-**Recourse**  
-Full recourse and eligible non-recourse structures available
+680+
 
 **Foreign Nationals**  
 Eligible
@@ -737,19 +805,27 @@ That is the difference between simply providing capital and understanding the de
 
 **What can a Bridge loan be used for?**
 
-Bridge financing may support acquisitions, refinances, property transitions, stabilization strategies, or situations where permanent financing is not yet appropriate.
+Bridge financing supports acquisitions, time-sensitive refinances, property transitions, and stabilization strategies where traditional or permanent financing is too slow.
 
 **Do you offer refinance Bridge loans?**
 
-Yes, eligible refinance scenarios may be considered.
+Yes, eligible rate/term and cash-out refinance scenarios may be considered.
 
-**Is non-recourse financing available?**
+**What underwriting approach does Helios1 Capital use instead of rigid personal qualification?**
 
-Eligible transactions may qualify for non-recourse structures depending on the program and underwriting.
+We utilize Asset-Based Underwriting. We underwrite the asset's intrinsic value, location, and exit economics rather than burdening borrowers with rigid bureaucratic personal income verification.
+
+**Do I need bank statements to qualify?**
+
+No bank statements needed. We focus on property collateral and project viability.
+
+**How quickly can a Stabilized Bridge loan close?**
+
+Stabilized bridge transactions can close in as fast as 10 business days once appraisal/valuation and clear title are in place.
 
 **Is prior investment experience required?**
 
-Some Helios1 Capital Bridge programs may accommodate borrowers without a minimum number of completed deals, subject to overall underwriting.
+Some Helios1 Capital Bridge programs accommodate borrowers with limited or no prior track record, subject to asset quality and overall transaction strength.
 
 **Are foreign nationals eligible?**
 
@@ -815,7 +891,8 @@ For investors acquiring, refinancing, repositioning, or stabilizing multifamily 
 
 Name  
 Email  
-Phone
+Phone  
+Estimated FICO  
 
 **CTA:**
 
@@ -827,30 +904,76 @@ Phone
 
 ![][image5]
 
+*Rates Starting at 6.49%+ | 5+ Units up to 30 Units | Up to 75% LTV / 80% LTC | Multifamily Perm & Bridge Solutions*
+
 ---
 
 **PROGRAM SNAPSHOT:**
 
 **Multifamily Financing at a Glance**
 
+### Tier 1: Multifamily Perm (5+ Unit Properties)
+
 **Eligible Properties**  
-5+ Unit Residential and eligible commercial / mixed-use assets
+5+ Units up to 30 Units (Multifamily Residential & Eligible Mixed-Use)
 
 **Loan Amount**  
-$500K–$15MM+
-
-**Term**  
-12–24 Months for Bridge strategies  
-5–30 Years for eligible DSCR structures
+$350K–$6MM
 
 **Rate**  
-6.99%+
+Starting at 6.49%+
+
+**Term Options**  
+30-Year Fixed or Hybrid ARM (5, 7, 10-Year)
+
+**Amortization**  
+30-Year Amortization Schedule
 
 **Maximum LTV**  
-Up to 75%
+Up to 75% Purchase & Rate/Term | Up to 70% Cash-Out
+
+**Minimum DSCR**  
+1.10x
 
 **Minimum FICO**  
-660
+680
+
+**Close Timeline**  
+4–6 Weeks
+
+**Foreign Nationals**  
+Eligible
+
+---
+
+### Tier 2: Multifamily Bridge (5+ Unit Properties)
+
+**Eligible Properties**  
+5+ Units up to 30 Units (Acquisitions, Value-Add, Repositioning)
+
+**Loan Amount**  
+$1MM–$10MM
+
+**Rate**  
+SOFR + 450 bps or Fixed Rate Options
+
+**Term**  
+12–24 Months (Extension options available)
+
+**Maximum Leverage**  
+Up to 75% Initial LTC | Up to 80% Blended LTC | Up to 70% LTARV
+
+**Underwriting Metrics**  
+9.0% Minimum Debt Yield | 1.20x Takeout DSCR
+
+**Origination Fee**  
+1.5%–2.5%
+
+**Close Timeline**  
+3–4 Weeks
+
+**Minimum FICO**  
+680
 
 **Foreign Nationals**  
 Eligible
@@ -903,25 +1026,25 @@ Helios1 Capital evaluates the **asset, borrower, cash flow, execution plan, capi
 
 **FAQ**
 
-**What property sizes qualify?**
+**What property sizes and unit counts qualify?**
 
-The Multifamily program is designed for eligible properties with five or more units.
+Both our Multifamily Perm and Multifamily Bridge programs cater to 5+ unit residential apartment buildings and select mixed-use commercial assets up to 30 units.
 
-**Do you offer both Bridge and long-term financing?**
+**What is the difference between Multifamily Perm and Multifamily Bridge?**
 
-Yes. Depending on the asset and business plan, bridge and longer-term DSCR-style structures may be available.
+Multifamily Perm provides long-term 30-year fixed or hybrid ARM financing starting at 6.49% for stabilized properties (up to 75% LTV, 1.10x DSCR). Multifamily Bridge offers short-term capital ($1MM–$10MM, 12–24 months) up to 80% blended LTC and 70% LTARV for acquisitions and value-add repositioning before long-term takeout.
 
 **Can Multifamily loans be used for refinancing?**
 
-Yes, eligible purchase and refinance transactions may be considered.
+Yes, both rate/term and cash-out refinancing are available (up to 70% cash-out LTV for Perm).
 
-**What is the maximum leverage?**
+**What are the debt coverage and debt yield requirements?**
 
-Eligible transactions may qualify for leverage of up to approximately 75% LTV, subject to program and underwriting.
+Multifamily Perm requires a minimum DSCR of 1.10x. Multifamily Bridge requires a 9.0% minimum debt yield and a 1.20x takeout DSCR feasibility.
 
 **Are foreign nationals eligible?**
 
-Yes, qualifying foreign national borrowers may be considered.
+Yes, qualifying foreign national investors and operators may be considered.
 
 ---
 

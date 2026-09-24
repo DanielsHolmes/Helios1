@@ -672,6 +672,18 @@
                             <label for="phone">Phone</label>
                             <input id="phone" type="tel" placeholder="(555) 123-4567">
                         </div>
+                        <div class="field">
+                            <label for="fico">Estimated FICO</label>
+                            <input id="fico" type="text" placeholder="e.g. 700">
+                        </div>
+                        <div class="field">
+                            <label for="purchase-price">Purchase Price</label>
+                            <input id="purchase-price" type="text" placeholder="$">
+                        </div>
+                        <div class="field">
+                            <label for="expected-value">Expected Value</label>
+                            <input id="expected-value" type="text" placeholder="$">
+                        </div>
                         <button type="submit" class="btn btn-gold">Get My Bridge Quote <span class="arr">→</span></button>
                         <p class="form-micro">No obligation. Tell us about the deal and our team will review the opportunity.</p>
                     </form>
@@ -685,9 +697,10 @@
         <div class="container">
             <div class="trust-inner">
                 <span class="trust-item"><span class="trust-stars">★★★★★</span> Rated by investors</span>
-                <span class="trust-item"><span class="dot"></span> Fast closing capital</span>
-                <span class="trust-item"><span class="dot"></span> Flexible non-recourse options</span>
-                <span class="trust-item"><span class="dot"></span> Direct access to decision-makers</span>
+                <span class="trust-item"><span class="dot"></span> Rates starting at 9.49%+ (Fixed)</span>
+                <span class="trust-item"><span class="dot"></span> No Bank Statements Needed</span>
+                <span class="trust-item"><span class="dot"></span> Close in 10 Days</span>
+                <span class="trust-item"><span class="dot"></span> Asset-Based Underwriting</span>
             </div>
         </div>
     </div>
@@ -696,92 +709,59 @@
     <section class="section" id="programs">
         <div class="container">
             <div class="section-head">
-                <h2 class="display">Bridge Financing at a Glance</h2>
-                <p class="lead">Fast liquidity solutions designed for time-sensitive acquisitions, property stabilization, and short-term capital transitions.</p>
+                <h2 class="display">Stabilized Bridge Financing at a Glance</h2>
+                <p class="lead">Fast liquidity solutions designed for time-sensitive acquisitions, property transitions, and short-term capital stabilization.</p>
             </div>
 
-            <!-- Tier 1: Residential Bridge -->
-            <div class="program-tier">
-                <h3 class="tier-title">Residential Bridge Financing <span class="badge">1–4 Units</span></h3>
-                <div class="snapshot-grid">
-                    <div class="snapshot-card">
-                        <div class="k">Eligible Properties</div>
-                        <div class="v">SFR, Condo, Townhome, 2–4 Units</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Loan Amount</div>
-                        <div class="v">$100K–$5MM</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Term</div>
-                        <div class="v">12–24 Months <small style="font-size:14px;color:var(--muted);font-weight:400;">(Extension options)</small></div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Rate</div>
-                        <div class="v">Starting at 9.99%+</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Maximum LTV</div>
-                        <div class="v">Up to 75%–80%</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Experience</div>
-                        <div class="v">No minimum deal requirement</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Minimum FICO</div>
-                        <div class="v">620+</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Recourse</div>
-                        <div class="v">Full recourse &amp; eligible non-recourse</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Foreign Nationals</div>
-                        <div class="v">Eligible</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tier 2: Commercial Bridge -->
             <div class="program-tier" style="margin-bottom:0;">
-                <h3 class="tier-title">Commercial Bridge Financing <span class="badge">Commercial &amp; Mixed-Use</span></h3>
                 <div class="snapshot-grid">
                     <div class="snapshot-card">
                         <div class="k">Eligible Properties</div>
-                        <div class="v">Retail, Office, Industrial, Mixed-Use</div>
+                        <div class="v">SFR, 2–4 Units, Townhomes, Condos, PUDs</div>
+                    </div>
+                    <div class="snapshot-card">
+                        <div class="k">Interest Rate</div>
+                        <div class="v">Starting at 9.49%+ <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Fixed Rate Only · No Prepay Penalty</small></div>
                     </div>
                     <div class="snapshot-card">
                         <div class="k">Loan Amount</div>
-                        <div class="v">$500K–$10MM+</div>
+                        <div class="v">$100K–$3.5MM</div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Term</div>
-                        <div class="v">12–36 Months</div>
+                        <div class="k">Maximum Leverage (LTV)</div>
+                        <div class="v">85% LTC / 70% LTV <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Purchase: 85% LTC (subj. to 70% LTV) · Cash-Out &amp; R/T: 70% LTV</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Rate</div>
-                        <div class="v">Starting at 9.99%+</div>
+                        <div class="k">Minimum DSCR</div>
+                        <div class="v">1.10x <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">If C3 condition (C1/C2 no min DSCR)</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Maximum LTV</div>
-                        <div class="v">Up to 75%</div>
+                        <div class="k">Term Options</div>
+                        <div class="v">12 Months <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Extensions possible · No prepay penalty</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Experience</div>
-                        <div class="v">No minimum deal requirement</div>
+                        <div class="k">Credit / Min FICO</div>
+                        <div class="v">680+ (>679)</div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Minimum FICO</div>
-                        <div class="v">640+</div>
+                        <div class="k">Appraisal Requirement</div>
+                        <div class="v">Standard Appraisal</div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Recourse</div>
-                        <div class="v">Full recourse &amp; eligible non-recourse</div>
+                        <div class="k">Underwriting Approach</div>
+                        <div class="v">Asset-Based Underwriting <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Fast institutional review</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Foreign Nationals</div>
-                        <div class="v">Eligible</div>
+                        <div class="k">Income Documentation</div>
+                        <div class="v">No Bank Statements Needed <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Foreign nationals eligible</small></div>
+                    </div>
+                    <div class="snapshot-card">
+                        <div class="k">Pre-Approval Speed</div>
+                        <div class="v">24-Hr Pre-Approval <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Soft credit pull</small></div>
+                    </div>
+                    <div class="snapshot-card">
+                        <div class="k">Close Timeline</div>
+                        <div class="v">10 Days <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Direct capital execution</small></div>
                     </div>
                 </div>
             </div>
@@ -889,8 +869,8 @@
                     <div class="faq-a"><p>Yes, eligible refinance scenarios may be considered.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Is non-recourse financing available? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Eligible transactions may qualify for non-recourse structures depending on the program and underwriting.</p></div>
+                    <button class="faq-q">Are bank statements required for Bridge financing? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>No bank statements are needed. We evaluate loans through asset-based underwriting, property valuation, condition, and a viable stabilization or exit plan.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">Is prior investment experience required? <span class="icon">+</span></button>
@@ -975,7 +955,7 @@
                                     <h3 class="card-title">DSCR Rental Properties</h3>
                                     <p class="card-desc">Long-term financing qualified on property cash flow without W-2s or tax returns.</p>
                                     <div class="card-meta">
-                                        <span class="meta-item">30-Year Fixed</span>
+                                        <span class="meta-item">Rates from 5.75%</span>
                                         <span class="meta-item">No W-2 Required</span>
                                     </div>
                                     <div class="card-action">
@@ -998,7 +978,7 @@
                                     <p class="card-desc">Expedited short-term capital for acquisitions, partner buyouts, and transitional assets.</p>
                                     <div class="card-meta">
                                         <span class="meta-item">Close in 5–10 Days</span>
-                                        <span class="meta-item">Non-Recourse Avail.</span>
+                                        <span class="meta-item">Fixed from 9.49%</span>
                                     </div>
                                     <div class="card-action">
                                         <a href="bridge-financing.html" class="btn btn-gold btn-sm">Explore Program <span class="arr">→</span></a>

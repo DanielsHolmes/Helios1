@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="DSCR Rental Loans with no tax returns or W-2s required. Long-term rental property financing with rates starting at 5.99% and up to 80% LTV from Helios1 Capital.">
+    <meta name="description" content="DSCR Rental Loans with no tax returns or W-2s required. Long-term rental property and portfolio financing with rates starting at 5.75% and up to 80% LTV (85% on exception) from Helios1 Capital.">
     <title>DSCR Rental Loans | Helios1 Capital</title>
     <link rel="icon" type="image/svg+xml" href="../Helios1_Logos/SVG File-01 (1).svg">
 
@@ -182,6 +182,16 @@
         .section { padding: 90px 0; }
         .section-head { max-width: 720px; margin-bottom: 48px; }
         .section-head .lead { color: var(--muted); margin-top: 16px; font-size: 16px; }
+
+        .program-tier { margin-bottom: 48px; }
+        .tier-title {
+            font-family: var(--serif); font-size: 22px; font-weight: 600;
+            color: var(--navy); margin-bottom: 20px; display: flex; align-items: center; gap: 12px;
+        }
+        .tier-title .badge {
+            font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+            padding: 4px 12px; border-radius: 100px; background: rgba(243, 159, 14, 0.15); color: var(--gold-2);
+        }
 
         .snapshot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
         .snapshot-card {
@@ -604,7 +614,8 @@
                 <img src="../assets/logo-horizontal.png" alt="Helios1 Capital">
             </a>
             <nav class="nav">
-                <a href="#programs">Loan Programs</a>
+                <a href="#programs">Single DSCR</a>
+                <a href="#portfolios">Portfolios</a>
                 <a href="#why">Why Helios1 Capital</a>
                 <a href="#how">How It Works</a>
                 <a href="#proof">Case Studies</a>
@@ -625,7 +636,8 @@
     <!-- Mobile nav -->
     <div class="mobile-nav" id="mobile-nav">
         <button class="close" id="mobile-close">✕</button>
-        <a href="#programs">Loan Programs</a>
+        <a href="#programs">Single DSCR</a>
+        <a href="#portfolios">Portfolios</a>
         <a href="#why">Why Helios1 Capital</a>
         <a href="#how">How It Works</a>
         <a href="#proof">Case Studies</a>
@@ -644,8 +656,8 @@
                 <div>
                     <span class="eyebrow">DSCR Rental Property Financing</span>
                     <h1>DSCR Rental Loans — No Tax Returns or W-2s Required</h1>
-                    <p class="hero-sub">Long-term rental financing based primarily on property cash flow, with rates starting at <strong>5.99% and up to 80% LTV</strong>.</p>
-                    <p class="hero-copy">For investors buying, refinancing, or cash-out refinancing rental properties—from individual units to larger portfolios.</p>
+                    <p class="hero-sub">Long-term rental financing based primarily on property cash flow, with rates starting at <strong>5.75% and up to 80% LTV (85% on exception)</strong>.</p>
+                    <p class="hero-copy">For investors buying, refinancing, or cash-out refinancing rental properties—from single-asset loans up to $2.5MM to cross-collateralized portfolios up to $3MM (up to 20 properties).</p>
                 </div>
                 <div class="form-card" id="quote">
                     <h3>Get Your DSCR Quote</h3>
@@ -662,6 +674,18 @@
                             <label for="phone">Phone</label>
                             <input id="phone" type="tel" placeholder="(555) 123-4567">
                         </div>
+                        <div class="field">
+                            <label for="fico">Estimated FICO</label>
+                            <input id="fico" type="text" placeholder="e.g. 700">
+                        </div>
+                        <div class="field">
+                            <label for="purchase-price">Purchase Price</label>
+                            <input id="purchase-price" type="text" placeholder="$">
+                        </div>
+                        <div class="field">
+                            <label for="expected-value">Expected Value</label>
+                            <input id="expected-value" type="text" placeholder="$">
+                        </div>
                         <button type="submit" class="btn btn-gold">Get My DSCR Quote <span class="arr">→</span></button>
                         <p class="form-micro">No obligation. Tell us about the deal and our team will review the opportunity.</p>
                     </form>
@@ -676,51 +700,63 @@
             <div class="trust-inner">
                 <span class="trust-item"><span class="trust-stars">★★★★★</span> Rated by investors</span>
                 <span class="trust-item"><span class="dot"></span> No W-2s or Tax Returns</span>
-                <span class="trust-item"><span class="dot"></span> Rates starting at 5.99%</span>
-                <span class="trust-item"><span class="dot"></span> Up to 80% LTV</span>
+                <span class="trust-item"><span class="dot"></span> Rates starting at 5.75%</span>
+                <span class="trust-item"><span class="dot"></span> Up to 80% LTV (85% Exception)</span>
             </div>
         </div>
     </div>
 
-    <!-- ============ PROGRAM SNAPSHOT ============ -->
+    <!-- ============ PROGRAM SNAPSHOT: SINGLE PROPERTY DSCR ============ -->
     <section class="section" id="programs">
         <div class="container">
             <div class="section-head">
-                <h2 class="display">DSCR Financing at a Glance</h2>
-                <p class="lead">Built for single-family rentals, small portfolios, and short-term rentals qualification based on income generated by the property.</p>
+                <h2 class="display">Single Property DSCR Financing</h2>
+                <p class="lead">Built for single-family rentals, 2–4 units, condos, townhomes, PUDs, and short-term rentals—qualifying based on property cash flow without W-2s, paystubs, or personal tax returns.</p>
             </div>
             <div class="snapshot-grid">
                 <div class="snapshot-card">
                     <div class="k">Eligible Properties</div>
-                    <div class="v">SFR, Condo, Townhome, 2–4 Units, STR portfolios</div>
+                    <div class="v">SFR, 2–4 Units, Condo, Townhome, PUD, STR <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">(STR Case by Case)</small></div>
                 </div>
                 <div class="snapshot-card">
-                    <div class="k">Loan Amount</div>
-                    <div class="v">$75K – $3MM <small style="font-size:14px;color:var(--muted);font-weight:400;">($2MM Portfolio)</small></div>
+                    <div class="k">Interest Rate</div>
+                    <div class="v">Starting at 5.75%</div>
                 </div>
                 <div class="snapshot-card">
-                    <div class="k">Term Options</div>
-                    <div class="v">5-, 10-, and 30-Year Fixed or ARM</div>
-                </div>
-                <div class="snapshot-card">
-                    <div class="k">Rate</div>
-                    <div class="v">Starting at 5.99%</div>
+                    <div class="k">Loan Size</div>
+                    <div class="v">$75K – $2.5MM</div>
                 </div>
                 <div class="snapshot-card">
                     <div class="k">Maximum LTV</div>
-                    <div class="v">Up to 80%</div>
-                </div>
-                <div class="snapshot-card">
-                    <div class="k">Income Documentation</div>
-                    <div class="v">No W-2s, paystubs, or tax returns</div>
+                    <div class="v">Up to 80% <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Purchase: 80% (85% on exc.) · R/T: 80% · Cash-Out: 75% (80% on exc.)</small></div>
                 </div>
                 <div class="snapshot-card">
                     <div class="k">Minimum DSCR</div>
-                    <div class="v">0.75x or higher</div>
+                    <div class="v">0.75x <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">(Lower DSCR Case by Case)</small></div>
                 </div>
                 <div class="snapshot-card">
-                    <div class="k">Minimum FICO</div>
-                    <div class="v">660</div>
+                    <div class="k">Term Options</div>
+                    <div class="v">30-Year Fixed or Hybrid ARM</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Amortization</div>
+                    <div class="v">Fully Amortizing or Partial Interest-Only</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Credit / Min FICO</div>
+                    <div class="v">660 <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">(Lower FICO on Exception)</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Minimum Seasoning</div>
+                    <div class="v">None <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">No seasoning required</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Close Timeline</div>
+                    <div class="v">2–3 Weeks</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Income Documentation</div>
+                    <div class="v">No W-2s or Tax Returns <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">No paystubs required</small></div>
                 </div>
                 <div class="snapshot-card">
                     <div class="k">Foreign Nationals</div>
@@ -730,8 +766,69 @@
         </div>
     </section>
 
+    <!-- ============ SEPARATE PORTFOLIOS SECTION ============ -->
+    <section class="section portfolio-section" id="portfolios" style="background: var(--cream-2); border-top: 1px solid var(--line);">
+        <div class="container">
+            <div class="section-head">
+                <span class="eyebrow" style="color:var(--gold-2);font-weight:700;letter-spacing:0.14em;text-transform:uppercase;font-size:12px;display:inline-block;margin-bottom:12px;">Portfolios Up to 20 Properties</span>
+                <h2 class="display">Portfolio DSCR Financing</h2>
+                <p class="lead">Cross-collateralized blanket loans structured under a single closing—designed for rental operators, aggregators, and investors scaling multiple properties efficiently.</p>
+            </div>
+            <div class="snapshot-grid">
+                <div class="snapshot-card">
+                    <div class="k">Eligible Properties</div>
+                    <div class="v">SFR, 2–4 Units, Condo, Townhome, PUD</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Interest Rate</div>
+                    <div class="v">Starting at 5.75%</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Portfolio Loan Size</div>
+                    <div class="v">$100K – $3MM <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Per Portfolio</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Number of Properties</div>
+                    <div class="v">Up to 20 <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Properties per portfolio</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Maximum LTV</div>
+                    <div class="v">Up to 80% <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Purchase: 80% · Rate/Term: 80% · Cash-Out: 75%</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Loan Structure</div>
+                    <div class="v">Blanket Loan <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">One closing, cross-collateralized</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Minimum DSCR</div>
+                    <div class="v">1.00x</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Term Options</div>
+                    <div class="v">30-Year Fixed or Hybrid ARM</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Amortization</div>
+                    <div class="v">Fully Amortizing or Partial Interest-Only</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Credit / Min FICO</div>
+                    <div class="v">660</div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Minimum Occupancy</div>
+                    <div class="v">90% <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">By unit count</small></div>
+                </div>
+                <div class="snapshot-card">
+                    <div class="k">Release Price &amp; Timeline</div>
+                    <div class="v">1.2x Release · 4–6 Wks <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">1.2x allocated loan amount / property</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ============ WHY HELIOS1 ============ -->
-    <section class="section" id="why" style="background: var(--cream-2);">
+    <section class="section" id="why" style="background: #fff;">
         <div class="container">
             <div class="section-head">
                 <h2 class="display">Financing Built Around the Investment</h2>
@@ -823,24 +920,32 @@
             </div>
             <div class="faq-list">
                 <div class="faq-item">
-                    <button class="faq-q">Do DSCR loans require tax returns? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>The DSCR program is designed around property cash flow and generally does not require W-2s, paystubs, or tax returns for income qualification.</p></div>
+                    <button class="faq-q">Do DSCR loans require tax returns or W-2s? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>No. DSCR financing qualifies based on the property’s rental income and debt service coverage rather than personal tax returns, W-2s, or paystubs.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Can I use DSCR for a refinance or cash-out refinance? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Yes. Purchase, refinance, and qualifying cash-out transactions may be considered.</p></div>
+                    <button class="faq-q">What are the maximum LTV limits for purchases and refinances? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>For Single Property DSCR: Purchase loans are available up to 80% LTV (85% on exception), Rate/Term refinances up to 80% LTV, and Cash-Out refinances up to 75% LTV (80% on exception). For Portfolio DSCR: Purchase and Rate/Term refinances are up to 80% LTV, and Cash-Out refinances up to 75% LTV.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Can I finance more than one rental property? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Yes. Helios1 Capital works with investors ranging from individual-property borrowers to larger portfolios, subject to program and underwriting requirements.</p></div>
+                    <button class="faq-q">What is the minimum DSCR ratio required? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>Single Property DSCR loans start at a minimum DSCR of 0.75x (lower DSCR considered case by case). For Portfolio DSCR loans, the minimum DSCR is 1.00x.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Are short-term rentals eligible? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Eligible STR properties may be considered.</p></div>
+                    <button class="faq-q">Can I finance a portfolio of multiple properties together? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>Yes. Our Portfolio DSCR program offers cross-collateralized blanket loans for up to 20 properties per portfolio, with loan amounts from $100K up to $3MM under a single closing. Portfolios require a minimum 90% occupancy by unit count and feature a 1.2x release price per property.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What are the closing timelines and seasoning requirements? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>Single Property DSCR loans typically close in 2–3 weeks with zero minimum seasoning required. Portfolio DSCR loans typically close in 4–6 weeks.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What property types and terms are available? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>Eligible properties include Single-Family Residences (SFR), 2–4 unit properties, condominiums, townhomes, PUDs, and Short-Term Rentals (STR case-by-case for single properties). Terms include 30-Year Fixed or Hybrid ARM with Fully Amortizing or Partial Interest-Only options.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">Are foreign nationals eligible? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Yes, qualifying foreign national investors may be eligible.</p></div>
+                    <div class="faq-a"><p>Yes, qualifying foreign national real estate investors may be eligible for DSCR financing.</p></div>
                 </div>
             </div>
         </div>
@@ -917,7 +1022,7 @@
                                     <h3 class="card-title">DSCR Rental Properties</h3>
                                     <p class="card-desc">Long-term financing qualified on property cash flow without W-2s or tax returns.</p>
                                     <div class="card-meta">
-                                        <span class="meta-item">30-Year Fixed</span>
+                                        <span class="meta-item">Rates from 5.75%</span>
                                         <span class="meta-item">No W-2 Required</span>
                                     </div>
                                     <div class="card-action">
@@ -940,7 +1045,7 @@
                                     <p class="card-desc">Expedited short-term capital for acquisitions, partner buyouts, and transitional assets.</p>
                                     <div class="card-meta">
                                         <span class="meta-item">Close in 5–10 Days</span>
-                                        <span class="meta-item">Non-Recourse Avail.</span>
+                                        <span class="meta-item">Fixed from 9.49%</span>
                                     </div>
                                     <div class="card-action">
                                         <a href="bridge-financing.html" class="btn btn-gold btn-sm">Explore Program <span class="arr">→</span></a>

@@ -676,7 +676,8 @@
             overflow: hidden;
         }
         .showcase-img { aspect-ratio: 3 / 2; overflow: hidden; }
-        .showcase-img img { width: 100%; height: 100%; object-fit: cover; }
+        .showcase-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .showcase-card:hover .showcase-img img { transform: scale(1.04); }
         .showcase-info { padding: 24px 26px 28px; }
         .showcase-num {
             font-family: var(--serif); font-style: italic;
@@ -1227,7 +1228,7 @@
             <div class="showcase-track-wrap">
                 <div class="showcase-track" id="showcase-track">
                     <article class="showcase-card">
-                        <div class="showcase-img"><img src="assets/townhouses.jpg" alt="Submit Your Deal"></div>
+                        <div class="showcase-img"><img src="assets/step1-submit-deal.jpg" alt="Submit Your Deal" loading="lazy"></div>
                         <div class="showcase-info">
                             <span class="showcase-num">01</span>
                             <h3>Submit Your Deal</h3>
@@ -1235,7 +1236,7 @@
                         </div>
                     </article>
                     <article class="showcase-card">
-                        <div class="showcase-img"><img src="assets/interior.webp" alt="Talk With an Experienced Lender"></div>
+                        <div class="showcase-img"><img src="assets/step2-experienced-lender.jpg" alt="Talk With an Experienced Lender" loading="lazy"></div>
                         <div class="showcase-info">
                             <span class="showcase-num">02</span>
                             <h3>Talk With an Experienced Lender</h3>
@@ -1243,7 +1244,7 @@
                         </div>
                     </article>
                     <article class="showcase-card">
-                        <div class="showcase-img"><img src="assets/city.webp" alt="Structure the Financing"></div>
+                        <div class="showcase-img"><img src="assets/step3-structure-financing.jpg" alt="Structure the Financing" loading="lazy"></div>
                         <div class="showcase-info">
                             <span class="showcase-num">03</span>
                             <h3>Structure the Financing</h3>
@@ -1251,7 +1252,7 @@
                         </div>
                     </article>
                     <article class="showcase-card">
-                        <div class="showcase-img"><img src="assets/case.webp" alt="Move Toward Closing"></div>
+                        <div class="showcase-img"><img src="assets/step4-move-toward-closing.jpg" alt="Move Toward Closing" loading="lazy"></div>
                         <div class="showcase-info">
                             <span class="showcase-num">04</span>
                             <h3>Move Toward Closing</h3>
@@ -1296,7 +1297,7 @@
             <h2 class="display sec-heading">Better Financing Decisions Start With Better Questions</h2>
             <div class="insights-grid">
                 <article class="insight-card" data-reveal>
-                    <div class="thumb"><img src="assets/insight1.webp" alt="DSCR rate comparison"></div>
+                    <div class="thumb"><img src="assets/insight-dscr-comparison.jpg" alt="What to Compare Beyond the DSCR Rate" loading="lazy"></div>
                     <div class="body">
                         <span class="meta">Lending</span>
                         <h3>What to Compare Beyond the DSCR Rate</h3>
@@ -1305,7 +1306,7 @@
                     </div>
                 </article>
                 <article class="insight-card" data-reveal data-reveal-delay="1">
-                    <div class="thumb"><img src="assets/insight2.webp" alt="Ground-up construction financeability"></div>
+                    <div class="thumb"><img src="assets/insight-ground-up-finance.jpg" alt="What Makes a Ground-Up Construction Deal Financeable?" loading="lazy"></div>
                     <div class="body">
                         <span class="meta">Construction</span>
                         <h3>What Makes a Ground-Up Construction Deal Financeable?</h3>
@@ -1314,7 +1315,7 @@
                     </div>
                 </article>
                 <article class="insight-card" data-reveal data-reveal-delay="2">
-                    <div class="thumb"><img src="assets/insight3.webp" alt="Construction draws"></div>
+                    <div class="thumb"><img src="assets/insight-construction-draws.jpg" alt="How Construction Draws Actually Work" loading="lazy"></div>
                     <div class="body">
                         <span class="meta">Operations</span>
                         <h3>How Construction Draws Actually Work</h3>

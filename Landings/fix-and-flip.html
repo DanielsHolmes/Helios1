@@ -672,6 +672,18 @@
                             <label for="phone">Phone</label>
                             <input id="phone" type="tel" placeholder="(555) 123-4567">
                         </div>
+                        <div class="field">
+                            <label for="fico">Estimated FICO</label>
+                            <input id="fico" type="text" placeholder="e.g. 700">
+                        </div>
+                        <div class="field">
+                            <label for="purchase-price">Purchase Price</label>
+                            <input id="purchase-price" type="text" placeholder="$">
+                        </div>
+                        <div class="field">
+                            <label for="expected-value">Expected Value</label>
+                            <input id="expected-value" type="text" placeholder="$">
+                        </div>
                         <button type="submit" class="btn btn-gold">Get My Fix &amp; Flip Quote <span class="arr">→</span></button>
                         <p class="form-micro">No obligation. Tell us about the deal and our team will review the opportunity.</p>
                     </form>
@@ -685,9 +697,11 @@
         <div class="container">
             <div class="trust-inner">
                 <span class="trust-item"><span class="trust-stars">★★★★★</span> Rated by investors</span>
-                <span class="trust-item"><span class="dot"></span> Private lending</span>
-                <span class="trust-item"><span class="dot"></span> Up to 100% Rehab Funding</span>
-                <span class="trust-item"><span class="dot"></span> Direct access to decision-makers</span>
+                <span class="trust-item"><span class="dot"></span> Rates starting at 8.75%+</span>
+                <span class="trust-item"><span class="dot"></span> Up to 90% LTC (100% on Exception)</span>
+                <span class="trust-item"><span class="dot"></span> 100% Rehab Funding</span>
+                <span class="trust-item"><span class="dot"></span> No Bank Statements Needed</span>
+                <span class="trust-item"><span class="dot"></span> No Appraisal Option</span>
             </div>
         </div>
     </div>
@@ -696,92 +710,59 @@
     <section class="section" id="programs">
         <div class="container">
             <div class="section-head">
-                <h2 class="display">Flexible Financing for Rehab Strategies</h2>
-                <p class="lead">From fast acquisitions and light cosmetic flips to complex value-add heavy rehab and repositioning strategies.</p>
+                <h2 class="display">Fix &amp; Flip Financing at a Glance</h2>
+                <p class="lead">Fast liquidity and rehab funding designed for residential acquisitions, renovations, and profitable exits.</p>
             </div>
 
-            <!-- Tier 1: Standard Fix & Flip -->
-            <div class="program-tier">
-                <h3 class="tier-title">Standard Fix &amp; Flip <span class="badge">Core Program</span></h3>
-                <div class="snapshot-grid">
-                    <div class="snapshot-card">
-                        <div class="k">Eligible Properties</div>
-                        <div class="v">SFR, Condo, Townhome, 2–4 Units</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Loan Amount</div>
-                        <div class="v">$100K–$5MM per property</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Term</div>
-                        <div class="v">12–18 Months <small style="font-size:14px;color:var(--muted);font-weight:400;">(Extensions available)</small></div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Maximum LTV</div>
-                        <div class="v">Up to 90% LTV <small style="font-size:13px;color:var(--gold-2);font-weight:600;">(100% On Exception)</small></div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Rehab Funding</div>
-                        <div class="v">Up to 100%</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Maximum ARV</div>
-                        <div class="v">70%–75%</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Rate</div>
-                        <div class="v">Starting at 9.99%+</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Minimum FICO</div>
-                        <div class="v">620+ Mid Score</div>
-                    </div>
-                    <div class="snapshot-card">
-                        <div class="k">Foreign Nationals</div>
-                        <div class="v">Eligible</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tier 2: Heavy Rehab -->
             <div class="program-tier" style="margin-bottom:0;">
-                <h3 class="tier-title">Heavy Rehab &amp; Value-Add <span class="badge">Multifamily &amp; Mixed-Use</span></h3>
                 <div class="snapshot-grid">
                     <div class="snapshot-card">
                         <div class="k">Eligible Properties</div>
-                        <div class="v">Mixed Use &amp; Multifamily (5–20 units)</div>
+                        <div class="v">SFR, 2–4 Units, Townhomes, Condos, PUDs</div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Loan Amount</div>
-                        <div class="v">$250K–$10MM</div>
+                        <div class="k">Rates</div>
+                        <div class="v">Starting at 8.75%+ <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Interest-Only · No Prepay Penalty</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Term</div>
-                        <div class="v">12–24 Months</div>
+                        <div class="k">Loan Size</div>
+                        <div class="v">$50K–$5MM <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Per property</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Maximum LTV</div>
-                        <div class="v">75%–80%</div>
+                        <div class="k">Max LTC (Purchase)</div>
+                        <div class="v">Up to 90% LTC <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">First-timers eligible · 100% on exception</small></div>
                     </div>
                     <div class="snapshot-card">
                         <div class="k">Rehab Funding</div>
-                        <div class="v">Up to 100%</div>
+                        <div class="v">100% of Rehab Budget <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Drawn as work completes</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Maximum ARV</div>
-                        <div class="v">70%–75%</div>
+                        <div class="k">Max LTV (ARV)</div>
+                        <div class="v">Up to 75% LTARV</div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Minimum FICO</div>
-                        <div class="v">640</div>
+                        <div class="k">Term Options</div>
+                        <div class="v">12–18 Months <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Extensions available</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Borrower Profile</div>
-                        <div class="v">Experienced Investors &amp; Builders</div>
+                        <div class="k">Appraisal Options</div>
+                        <div class="v">No Appraisal Option <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">or AMC Appraisal available</small></div>
                     </div>
                     <div class="snapshot-card">
-                        <div class="k">Foreign Nationals</div>
-                        <div class="v">Eligible</div>
+                        <div class="k">Income Documentation</div>
+                        <div class="v">No Bank Statements Needed <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Foreign nationals eligible</small></div>
+                    </div>
+                    <div class="snapshot-card">
+                        <div class="k">Credit / Min FICO</div>
+                        <div class="v">620+ <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Guarantor accepted</small></div>
+                    </div>
+                    <div class="snapshot-card">
+                        <div class="k">Pre-Approval &amp; Draws</div>
+                        <div class="v">24-Hr Pre-Approval <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Soft credit pull · Draws reimbursed in 24–48 hrs</small></div>
+                    </div>
+                    <div class="snapshot-card">
+                        <div class="k">Close Timeline</div>
+                        <div class="v">7–14 Days <small style="font-size:13px;color:var(--muted);font-weight:400;display:block;margin-top:2px;">Expedited closing process</small></div>
                     </div>
                 </div>
             </div>
@@ -882,23 +863,27 @@
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-q">Can you finance renovation costs? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Yes. Eligible Fix &amp; Flip programs may finance up to 100% of qualifying rehab costs, subject to underwriting.</p></div>
+                    <div class="faq-a"><p>Yes. We finance up to 100% of the qualifying rehab budget (drawn as work completes), with draws reimbursed within 24–48 hours.</p></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-q">Do you finance heavy rehab projects? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Yes. Helios1 Capital offers financing options for both standard Fix &amp; Flip opportunities and heavier rehabilitation or repositioning projects.</p></div>
+                    <button class="faq-q">What are the appraisal and valuation options? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>We offer both a No-Appraisal Option and AMC Appraisals, allowing investors to move fast, waive unnecessary delays, and close in as few as 7–14 days.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Are bank statements needed for qualification? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>No bank statements are needed. Our asset-based approach focuses on purchase price, scope of work, and expected after-repair value (ARV).</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">What property types are eligible? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Depending on the program, eligible properties may include SFRs, condos, townhomes, 2–4 units, mixed-use assets, and selected multifamily properties.</p></div>
+                    <div class="faq-a"><p>Eligible properties include Single-Family Residences (SFR), 2–4 unit residential properties, townhomes, condominiums, and PUDs.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can I refinance into a DSCR rental loan instead of selling? <span class="icon">+</span></button>
+                    <div class="faq-a"><p>Yes. Once your property is renovated and tenant-stabilized, Helios1 Capital seamlessly transitions you into our long-term DSCR rental program with rates from 5.75%.</p></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-q">Are foreign nationals eligible? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Yes, eligible foreign national borrowers may be considered.</p></div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-q">Can I refinance instead of selling after renovation? <span class="icon">+</span></button>
-                    <div class="faq-a"><p>Depending on the stabilized property and borrower qualifications, Helios1 Capital may be able to support a transition into DSCR or another long-term financing solution.</p></div>
+                    <div class="faq-a"><p>Yes, eligible foreign national real estate investors can qualify for Fix &amp; Flip financing.</p></div>
                 </div>
             </div>
         </div>
@@ -975,7 +960,7 @@
                                     <h3 class="card-title">DSCR Rental Properties</h3>
                                     <p class="card-desc">Long-term financing qualified on property cash flow without W-2s or tax returns.</p>
                                     <div class="card-meta">
-                                        <span class="meta-item">30-Year Fixed</span>
+                                        <span class="meta-item">Rates from 5.75%</span>
                                         <span class="meta-item">No W-2 Required</span>
                                     </div>
                                     <div class="card-action">
@@ -998,7 +983,7 @@
                                     <p class="card-desc">Expedited short-term capital for acquisitions, partner buyouts, and transitional assets.</p>
                                     <div class="card-meta">
                                         <span class="meta-item">Close in 5–10 Days</span>
-                                        <span class="meta-item">Non-Recourse Avail.</span>
+                                        <span class="meta-item">Fixed from 9.49%</span>
                                     </div>
                                     <div class="card-action">
                                         <a href="bridge-financing.html" class="btn btn-gold btn-sm">Explore Program <span class="arr">→</span></a>
