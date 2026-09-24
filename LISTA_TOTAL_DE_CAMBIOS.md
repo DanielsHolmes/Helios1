@@ -229,6 +229,9 @@ Se generaron e integraron 7 nuevas imágenes fotorrealistas de alta definición 
    - **Artículo 2 (`assets/insight-ground-up-finance.jpg`):** Arquitecta/desarrolladora con casco y planos en obra de construcción residencial de lujo en estructura inicial bajo la luz matutina.
    - **Artículo 3 (`assets/insight-construction-draws.jpg`):** Inspectora de obra en chaleco con tablet digital auditando hitos y calendario de desembolsos (*Draw Milestone Schedules*) en interior de vivienda en construcción.
 
+3. **Sección "About / Credibility" (`#about` - *Real Estate Lending Informed by Capital Markets Experience*):**
+   - **Imagen Principal (`assets/capital-markets-lending.jpg`):** Comité de inversión y socios ejecutivos en una sala de juntas ejecutiva de esquina con ventanales hacia el distrito financiero, analizando en pantalla interactiva la analítica de cartera de deuda inmobiliaria (*Real Estate Credit Fund: Debt Financing Portfolio Analytics*), con modelos de crédito estructurado en portátiles y term sheets impresos. Sustituye la imagen genérica anterior de sala de estar.
+
 ---
 
 ## 4. Estado de Verificación y Compilación
