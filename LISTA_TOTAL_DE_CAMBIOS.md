@@ -234,6 +234,17 @@ Se generaron e integraron 7 nuevas imágenes fotorrealistas de alta definición 
 
 ---
 
+### H. Estandarización del Logo en el Footer (Versión Blanca)
+
+1. **Generación del Asset Oficial Blanco:** Se procesó y generó `assets/logo-white.png` (y réplica en `img/logo-white.png`), un PNG de ultra alta resolución (5742x1386) con fondo transparente y gráfico/tipografía en blanco puro (#FFFFFF).
+2. **Corrección en Multifamily (`Landings/multifamily.html`):**
+   - Se corrigió el problema por el cual el logo se mostraba en sus colores originales (azul/dorado) sobre el fondo oscuro.
+   - Se añadió la regla CSS `.footer-logo img { height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.92; }`.
+   - Se enlazó directamente al nuevo asset `../assets/logo-white.png`.
+3. **Estandarización en todas las páginas:** Se actualizó la referencia en el pie de página de `index.html` y de las 5 landings (`ground-up-construction.html`, `fix-and-flip.html`, `dscr-rental-properties.html`, `bridge-financing.html` y `multifamily.html`) para utilizar `logo-white.png` junto con las reglas de estilo consistentes.
+
+---
+
 ## 4. Estado de Verificación y Compilación
 
 - **Validación Sintáctica HTML:** Todos los archivos HTML (`.html`) fueron analizados mediante analizadores de estructura (`HTMLParser`) confirmando cero etiquetas sin cerrar, jerarquías semánticas correctas y coherencia en identificadores de formulario.
