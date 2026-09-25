@@ -245,6 +245,14 @@ Se generaron e integraron 7 nuevas imágenes fotorrealistas de alta definición 
 
 ---
 
+### I. Actualización de LTC a 90% en la Card de Ground-Up Construction del Carrusel
+
+En las 5 páginas de destino (`ground-up-construction.html`, `fix-and-flip.html`, `dscr-rental-properties.html`, `bridge-financing.html` y `multifamily.html`), en la tarjeta **Card 1: Ground-Up Construction** del carrusel interactivo 3D de programas, se ajustó el valor de apalancamiento:
+- **Antes:** `Up to 85% LTC`
+- **Ahora:** `Up to 90% LTC` (alineado con la Matriz de Productos oficial).
+
+---
+
 ## 4. Estado de Verificación y Compilación
 
 - **Validación Sintáctica HTML:** Todos los archivos HTML (`.html`) fueron analizados mediante analizadores de estructura (`HTMLParser`) confirmando cero etiquetas sin cerrar, jerarquías semánticas correctas y coherencia en identificadores de formulario.
