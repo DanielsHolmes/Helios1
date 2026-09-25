@@ -253,6 +253,14 @@ En las 5 páginas de destino (`ground-up-construction.html`, `fix-and-flip.html`
 
 ---
 
+### J. Actualización a "Rates from 6.49%*" en la Card de Multifamily del Carrusel
+
+En las 5 páginas de destino (`ground-up-construction.html`, `fix-and-flip.html`, `dscr-rental-properties.html`, `bridge-financing.html` y `multifamily.html`), en la tarjeta **Card 5: Multifamily Financing** del carrusel interactivo 3D de programas, se actualizó la métrica principal:
+- **Antes:** `$1M to $25M+`
+- **Ahora:** `Rates from 6.49%*` (alineado con la Matriz de Productos oficial).
+
+---
+
 ## 4. Estado de Verificación y Compilación
 
 - **Validación Sintáctica HTML:** Todos los archivos HTML (`.html`) fueron analizados mediante analizadores de estructura (`HTMLParser`) confirmando cero etiquetas sin cerrar, jerarquías semánticas correctas y coherencia en identificadores de formulario.
