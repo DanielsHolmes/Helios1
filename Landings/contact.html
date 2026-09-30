@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Contact Helios1 Capital. Bring us your real estate deal, broker referral inquiry, or financing questions.">
+    <title>Contact Us | Bring Us the Deal | Helios1 Capital</title>
+    <link rel="icon" type="image/svg+xml" href="../Helios1_Logos/SVG File-01 (1).svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        :root {
+            --navy: #0D1B28;
+            --navy-2: #0A1520;
+            --ink: #10202E;
+            --gold: #F39F0E;
+            --gold-2: #E08E06;
+            --cream: #FBF8F2;
+            --cream-2: #F4EFE6;
+            --white: #FFFFFF;
+            --muted: #5C6B77;
+            --line: rgba(13, 27, 40, 0.12);
+            --line-light: rgba(255, 255, 255, 0.14);
+            --serif: "Poppins", -apple-system, sans-serif;
+            --sans: "Manrope", -apple-system, sans-serif;
+            --container: 1200px;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+        .display {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+        }
+        .lead { font-size: 18px; color: var(--muted); line-height: 1.6; }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            padding: 15px 28px;
+            border-radius: 100px;
+            transition: all 0.35s var(--ease);
+            cursor: pointer;
+            border: 1px solid transparent;
+            line-height: 1;
+        }
+        .btn .arr { transition: transform 0.35s var(--ease); }
+        .btn:hover .arr { transform: translateX(4px); }
+        .btn-gold { background: var(--gold); color: var(--navy); }
+        .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); box-shadow: 0 16px 34px -14px rgba(243, 159, 14, 0.7); }
+        .btn-outline { border-color: var(--navy); color: var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: var(--cream); }
+        .btn-outline-light { border-color: rgba(255,255,255,0.4); color: #fff; }
+        .btn-outline-light:hover { background: #fff; color: var(--navy); }
+
+        /* ---------- Header ---------- */
+        .site-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(251, 248, 242, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+            transition: box-shadow 0.3s ease;
+        }
+        .site-header.scrolled { box-shadow: 0 10px 40px -20px rgba(13,27,40,0.35); }
+        .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 24px; }
+        .brand img { height: 32px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a { font-size: 13px; font-weight: 600; color: var(--ink); position: relative; padding: 6px 0; white-space: nowrap; }
+        .nav a::after {
+            content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+            background: var(--gold); transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .nav a:hover::after, .nav a.active::after { transform: scaleX(1); transform-origin: left; }
+        .nav a.active { color: var(--navy); font-weight: 700; }
+        .nav-cta { display: flex; align-items: center; gap: 18px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 4px 0; }
+
+        .mobile-nav {
+            position: fixed; inset: 0; background: var(--navy); color: #fff; z-index: 999;
+            display: flex; flex-direction: column; justify-content: center; padding: 80px 32px;
+            transform: translateX(100%); transition: transform 0.5s var(--ease);
+        }
+        .mobile-nav.open { transform: translateX(0); }
+        .mobile-nav a { font-family: var(--serif); font-size: 24px; color: #fff; padding: 12px 0; }
+        .mobile-nav .close { position: absolute; top: 28px; right: 32px; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            position: relative;
+            padding: 160px 0 80px;
+            color: #fff;
+            background: var(--navy-2);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background-image: url('../assets/townhouses.jpg');
+            background-size: cover; background-position: center;
+            opacity: 0.18;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,21,32,0.65) 0%, rgba(10,21,32,0.94) 100%);
+        }
+        .hero .container { position: relative; z-index: 2; }
+        .hero-block { max-width: 800px; }
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 18px;
+        }
+        .hero h1,
+        .hero .display {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(34px, 4.8vw, 56px);
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+            color: #FFFFFF !important;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+        .hero-sub {
+            font-size: 18px; color: #E8E2D4;
+            max-width: 720px; margin-bottom: 16px; line-height: 1.6;
+        }
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--serif);
+            font-size: 17px;
+            font-style: italic;
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* ---------- Contact Grid Section ---------- */
+        .section { padding: 90px 0; }
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.35fr 0.85fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        /* Form Card */
+        .form-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 44px 40px;
+            box-shadow: 0 30px 60px -25px rgba(13,27,40,0.12);
+        }
+        .form-card-head { margin-bottom: 32px; }
+        .form-card-head h2 { font-size: 26px; font-family: var(--serif); color: var(--navy); margin-bottom: 8px; }
+        .form-card-head p { font-size: 14px; color: var(--muted); }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .field { margin-bottom: 22px; }
+        .field label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        .field label span.req { color: var(--gold-2); }
+        .field input, .field select, .field textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 15px;
+            font-family: var(--sans);
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--cream);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .field input:focus, .field select:focus, .field textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(243,159,14,0.15);
+            background: #fff;
+        }
+        .field textarea { min-height: 120px; resize: vertical; }
+
+        /* Help Selection Tabs / Chips */
+        .option-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 4px;
+        }
+        .option-chip {
+            cursor: pointer;
+        }
+        .option-chip input { display: none; }
+        .chip-label {
+            display: inline-block;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: var(--cream);
+            color: var(--navy);
+            transition: all 0.25s ease;
+        }
+        .option-chip input:checked + .chip-label {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+            box-shadow: 0 4px 12px rgba(13,27,40,0.15);
+        }
+        .option-chip:hover .chip-label {
+            border-color: var(--gold);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            font-size: 15px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        /* Success Message Overlay */
+        .success-box {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            background: #FAFAF7;
+            border-radius: 12px;
+            border: 1px solid rgba(243,159,14,0.3);
+        }
+        .success-box.show { display: block; }
+        .success-icon {
+            width: 60px; height: 60px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 20px;
+            font-weight: 700;
+        }
+
+        /* Sidebar Cards */
+        .contact-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .info-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 34px 30px;
+            box-shadow: 0 15px 35px -20px rgba(13,27,40,0.08);
+        }
+        .info-card h3 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        .info-card p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 15px;
+            color: var(--navy);
+            font-weight: 600;
+        }
+        .contact-item:last-child { border-bottom: none; }
+        .contact-item .icon {
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            background: var(--cream);
+            border: 1px solid var(--line);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--gold-2);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .contact-item a:hover { color: var(--gold-2); }
+
+        /* Broker Partner Card */
+        .broker-card {
+            background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 100%);
+            color: #fff;
+            border-radius: 12px;
+            padding: 36px 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px -20px rgba(13,27,40,0.3);
+        }
+        .broker-card .eyebrow { color: var(--gold); margin-bottom: 12px; }
+        .broker-card h3 {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 500;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+        .broker-card p {
+            font-size: 14px;
+            color: #9FB0BC;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .broker-card .btn { width: 100%; justify-content: center; }
+
+        /* Guarantee / Commitment Bar */
+        .commitment-box {
+            background: var(--cream-2);
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--navy);
+            font-weight: 600;
+            border-left: 3px solid var(--gold);
+        }
+
+        /* ---------- Footer ---------- */
+        .site-footer { background: var(--navy-2); color: #9FB0BC; padding: 90px 0 40px; margin-top: 40px; }
+        .footer-top {
+            display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.3fr; gap: 44px;
+            padding-bottom: 60px; border-bottom: 1px solid var(--line-light);
+        }
+        .footer-brand .footer-logo img { height: 32px; width: auto; margin-bottom: 18px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: #7F93A3; }
+        .footer-col h4 { font-family: var(--serif); font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 18px; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { font-size: 13px; color: #9FB0BC; transition: color 0.3s ease; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-col .contact-line { font-size: 13px; margin-bottom: 10px; line-height: 1.5; }
+        .footer-col .contact-line a { color: var(--gold); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 30px; font-size: 13px; color: #5C6E7E; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-bottom .legal { display: flex; gap: 20px; }
+        .footer-bottom .legal a:hover { color: #9FB0BC; }
+
+        @media (max-width: 991px) {
+            .nav { display: none; }
+            .nav-toggle { display: block; }
+            .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 600px) {
+            .form-grid-2 { grid-template-columns: 1fr; gap: 0; }
+            .form-card { padding: 30px 20px; }
+            .footer-top { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+        <div class="container nav-wrap">
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo-horizontal.png" alt="Helios1 Capital">
+            </a>
+            <nav class="nav">
+                <a href="../index.html#loans">Loan Programs</a>
+                <a href="about.html">About</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#contact-form-section" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close" id="mobile-close" aria-label="Close menu"><span class="material-symbols-outlined" style="font-size: 28px;">close</span></button>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#loans">Loan Programs</a>
+        <a href="about.html">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="#contact-form-section" style="color: var(--gold);">Submit a Deal →</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-block">
+                <span class="eyebrow">CONTACT HELIOS1 CAPITAL</span>
+                <h1 class="display" style="color: #FFFFFF !important;">Bring Us the Deal.</h1>
+                <p class="hero-sub">Tell us what you’re working on, what you need, and where things stand. Whether it’s a new build, rental property, refinance, or another real estate opportunity, share the basics and we’ll take it from there.</p>
+                <div class="hero-tag">
+                    <span class="material-symbols-outlined" style="font-size: 19px; color: var(--gold);">verified</span>
+                    <span>We Get the Deal. Start with yours.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT FORM & SIDEBAR ============ -->
+    <section class="section" id="contact-form-section">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- MAIN FORM -->
+                <div class="form-card">
+                    <div class="form-card-head">
+                        <h2>Tell Us What You’re Working On.</h2>
+                        <p>A brief overview is enough to start. Our senior team evaluates inquiries within 24 business hours.</p>
+                    </div>
+
+                    <form id="deal-inquiry-form" onsubmit="handleContactSubmit(event)">
+                        <!-- What can we help with? -->
+                        <div class="field">
+                            <label>What can we help with? <span class="req">*</span></label>
+                            <div class="option-chips">
+                                <label class="option-chip">
+                                    <input type="radio" name="help_type" value="Deal Financing" checked>
+                                    <span class="chip-label">Deal Financing</span>
+                                </label>
+                                <label class="option-chip">
+                                    <input type="radio" name="help_type" value="Broker or Referral Inquiry" id="chip-broker">
+                                    <span class="chip-label">Broker / Referral Inquiry</span>
+                                </label>
+                                <label class="option-chip">
+                                    <input type="radio" name="help_type" value="General Question">
+                                    <span class="chip-label">General Question</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Personal Info -->
+                        <div class="form-grid-2">
+                            <div class="field">
+                                <label for="fullName">Full Name <span class="req">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email Address <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="field">
+                                <label for="phone">Phone Number <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
+                            </div>
+                            <div class="field">
+                                <label for="location">Property Location (City &amp; State) <span class="req">*</span></label>
+                                <input type="text" id="location" name="location" placeholder="e.g. Austin, TX or Saratoga, CA" required>
+                            </div>
+                        </div>
+
+                        <!-- Financing Interest -->
+                        <div class="field">
+                            <label for="financingInterest">Financing Interest <span class="req">*</span></label>
+                            <select id="financingInterest" name="financingInterest" required>
+                                <option value="Ground-Up Construction" selected>Ground-Up Construction</option>
+                                <option value="DSCR Rental Loans">DSCR Rental Loans</option>
+                                <option value="Fix & Flip">Fix &amp; Flip</option>
+                                <option value="Bridge Financing">Bridge Financing</option>
+                                <option value="Multifamily">Multifamily</option>
+                                <option value="Not Sure Yet">Not Sure Yet</option>
+                            </select>
+                        </div>
+
+                        <!-- Estimated Loan Amount -->
+                        <div class="field">
+                            <label for="loanAmount">Estimated Loan Amount</label>
+                            <select id="loanAmount" name="loanAmount">
+                                <option value="">Select loan amount range</option>
+                                <option value="$250K - $1M">$250,000 – $1,000,000</option>
+                                <option value="$1M - $3M">$1,000,000 – $3,000,000</option>
+                                <option value="$3M - $10M">$3,000,000 – $10,000,000</option>
+                                <option value="$10M+">$10,000,000+</option>
+                            </select>
+                        </div>
+
+                        <!-- Project or Question -->
+                        <div class="field">
+                            <label for="projectDetails">Your Project or Question <span class="req">*</span></label>
+                            <textarea id="projectDetails" name="projectDetails" placeholder="Tell us about the property, your plan, the financing you need, and your timeline." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold submit-btn">Send My Inquiry <span class="arr">→</span></button>
+                    </form>
+
+                    <!-- Success State -->
+                    <div id="form-success-box" class="success-box">
+                        <div class="success-icon">
+                            <span class="material-symbols-outlined" style="font-size: 32px; color: var(--gold);">check_circle</span>
+                        </div>
+                        <h3 style="font-family: var(--serif); font-size: 24px; color: var(--navy); margin-bottom: 10px;">Inquiry Received</h3>
+                        <p style="font-size: 15px; color: var(--muted); margin-bottom: 20px;">Thank you for bringing your deal to Helios1 Capital. A senior member of our underwriting and lending team will review your project and get back to you within 24 business hours.</p>
+                        <button onclick="resetInquiryForm()" class="btn btn-outline" style="font-size: 13px; padding: 10px 20px;">Submit Another Inquiry</button>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR -->
+                <div class="contact-sidebar">
+
+                    <!-- Direct Contact -->
+                    <div class="info-card">
+                        <h3>Prefer to Talk Directly?</h3>
+                        <p>Have a question or want to discuss an immediate opportunity with a senior consultant?</p>
+
+                        <div class="contact-item">
+                            <div class="icon">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">call</span>
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; text-transform: uppercase; color: var(--muted);">Direct Line</div>
+                                <a href="tel:+16464070347">+1 (646) 407 0347</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">mail</span>
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; text-transform: uppercase; color: var(--muted);">Direct Email</div>
+                                <a href="mailto:info@helios1cap.com">info@helios1cap.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="icon">
+                                <span class="material-symbols-outlined" style="font-size: 18px;">schedule</span>
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; text-transform: uppercase; color: var(--muted);">Desk Hours</div>
+                                <span>Mon–Fri: 9:00 AM – 6:00 PM EST</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 24px;">
+                            <div class="commitment-box">
+                                <span class="material-symbols-outlined" style="color: var(--gold); font-size: 20px;">bolt</span>
+                                <span>24-Hour Deal Feedback Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Broker / Referral Card -->
+                    <div class="broker-card">
+                        <span class="eyebrow">PARTNERSHIP</span>
+                        <h3>Bringing Us a Client’s Deal?</h3>
+                        <p>We work with mortgage brokers, real estate agents, and referral partners supporting active investors and builders. Share the opportunity, financing need, and timeline, and we’ll review the deal with you.</p>
+                        <button type="button" onclick="selectBrokerTab()" class="btn btn-gold">Discuss a Referral <span class="arr">→</span></button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo-white.png" alt="Helios1 Capital">
+                    </a>
+                    <p>Private real estate lending for investors, builders, and developers. Ground-Up Construction, DSCR Rentals, Fix &amp; Flip, Bridge &amp; Multifamily.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Loan Programs</h4>
+                    <ul>
+                        <li><a href="ground-up-construction.html">Ground-Up Construction</a></li>
+                        <li><a href="fix-and-flip.html">Fix &amp; Flip</a></li>
+                        <li><a href="dscr-rental-properties.html">DSCR Rental Properties</a></li>
+                        <li><a href="bridge-financing.html">Bridge Financing</a></li>
+                        <li><a href="multifamily.html">Multifamily</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="case-study-saratoga.html">Saratoga Case Study</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../index.html#how">How It Works</a></li>
+                        <li><a href="faqs.html">Borrower FAQ</a></li>
+                        <li><a href="contact.html?type=broker">Broker Partners</a></li>
+                        <li><a href="contact.html">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="contact-line">Phone: <a href="tel:+16464070347">+1 (646) 407 0347</a></div>
+                    <div class="contact-line">Email: <a href="mailto:info@helios1cap.com">info@helios1cap.com</a></div>
+                    <div class="contact-line">Hours: Mon – Fri: 9:00 AM – 6:00 PM EST</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Helios1 Capital. All rights reserved.</p>
+                <div class="legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Licenses &amp; Disclosures</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            // Sticky header shadow
+            const header = document.getElementById('site-header');
+            const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            // Mobile nav
+            const toggle = document.getElementById('nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const close = document.getElementById('mobile-close');
+            if (toggle && mobileNav && close) {
+                toggle.addEventListener('click', () => mobileNav.classList.add('open'));
+                close.addEventListener('click', () => mobileNav.classList.remove('open'));
+                mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+            }
+
+            // Check URL query param (e.g. ?type=broker or ?product=ground-up)
+            const urlParams = new URLSearchParams(window.location.search);
+            const type = urlParams.get('type');
+            const product = urlParams.get('product');
+
+            if (type === 'broker') {
+                const brokerRadio = document.getElementById('chip-broker');
+                if (brokerRadio) brokerRadio.checked = true;
+            }
+
+            if (product) {
+                const select = document.getElementById('financingInterest');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value.toLowerCase().includes(product.toLowerCase())) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+        })();
+
+        function selectBrokerTab() {
+            const brokerRadio = document.getElementById('chip-broker');
+            if (brokerRadio) {
+                brokerRadio.checked = true;
+                document.getElementById('contact-form-section').scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('fullName').focus();
+            }
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('deal-inquiry-form');
+            const successBox = document.getElementById('form-success-box');
+            form.style.display = 'none';
+            successBox.classList.add('show');
+        }
+
+        function resetInquiryForm() {
+            const form = document.getElementById('deal-inquiry-form');
+            const successBox = document.getElementById('form-success-box');
+            form.reset();
+            form.style.display = 'block';
+            successBox.classList.remove('show');
+        }
+    </script>
+</body>
+</html>

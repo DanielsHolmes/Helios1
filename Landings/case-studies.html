@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Helios1 Capital Case Studies. Explore the deals behind the decisions across Ground-Up Construction, DSCR, Fix & Flip, Bridge, and Multifamily financing.">
+    <title>Case Studies | The Deals Behind the Decisions | Helios1 Capital</title>
+    <link rel="icon" type="image/svg+xml" href="../Helios1_Logos/SVG File-01 (1).svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #0D1B28;
+            --navy-2: #0A1520;
+            --ink: #10202E;
+            --gold: #F39F0E;
+            --gold-2: #E08E06;
+            --cream: #FBF8F2;
+            --cream-2: #F4EFE6;
+            --white: #FFFFFF;
+            --muted: #5C6B77;
+            --line: rgba(13, 27, 40, 0.12);
+            --line-light: rgba(255, 255, 255, 0.14);
+            --serif: "Poppins", -apple-system, sans-serif;
+            --sans: "Manrope", -apple-system, sans-serif;
+            --container: 1200px;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+        .display {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+        }
+        .lead { font-size: 18px; color: var(--muted); line-height: 1.6; }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            padding: 15px 28px;
+            border-radius: 100px;
+            transition: all 0.35s var(--ease);
+            cursor: pointer;
+            border: 1px solid transparent;
+            line-height: 1;
+        }
+        .btn .arr { transition: transform 0.35s var(--ease); }
+        .btn:hover .arr { transform: translateX(4px); }
+        .btn-gold { background: var(--gold); color: var(--navy); }
+        .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); box-shadow: 0 16px 34px -14px rgba(243, 159, 14, 0.7); }
+        .btn-outline { border-color: var(--navy); color: var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: var(--cream); }
+        .btn-outline-light { border-color: rgba(255,255,255,0.4); color: #fff; }
+        .btn-outline-light:hover { background: #fff; color: var(--navy); }
+
+        .text-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-weight: 700; font-size: 14px; letter-spacing: 0.02em;
+            color: var(--navy); position: relative; padding-bottom: 4px;
+        }
+        .text-link::after {
+            content: ""; position: absolute; left: 0; bottom: 0;
+            width: 100%; height: 1px; background: var(--gold);
+            transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .text-link:hover::after { transform: scaleX(1); transform-origin: left; }
+        .text-link .arr { color: var(--gold-2); transition: transform 0.35s var(--ease); }
+        .text-link:hover .arr { transform: translateX(4px); }
+
+        /* ---------- Header ---------- */
+        .site-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(251, 248, 242, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+            transition: box-shadow 0.3s ease;
+        }
+        .site-header.scrolled { box-shadow: 0 10px 40px -20px rgba(13,27,40,0.35); }
+        .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 24px; }
+        .brand img { height: 32px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a { font-size: 13px; font-weight: 600; color: var(--ink); position: relative; padding: 6px 0; white-space: nowrap; }
+        .nav a::after {
+            content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+            background: var(--gold); transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .nav a:hover::after, .nav a.active::after { transform: scaleX(1); transform-origin: left; }
+        .nav a.active { color: var(--navy); font-weight: 700; }
+        .nav-cta { display: flex; align-items: center; gap: 18px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 4px 0; }
+
+        .mobile-nav {
+            position: fixed; inset: 0; background: var(--navy); color: #fff; z-index: 999;
+            display: flex; flex-direction: column; justify-content: center; padding: 80px 32px;
+            transform: translateX(100%); transition: transform 0.5s var(--ease);
+        }
+        .mobile-nav.open { transform: translateX(0); }
+        .mobile-nav a { font-family: var(--serif); font-size: 24px; color: #fff; padding: 12px 0; }
+        .mobile-nav .close { position: absolute; top: 28px; right: 32px; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            position: relative;
+            padding: 160px 0 90px;
+            color: #fff;
+            background: var(--navy-2);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background-image: url('../assets/case.webp');
+            background-size: cover; background-position: center;
+            opacity: 0.22;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,21,32,0.6) 0%, rgba(10,21,32,0.92) 100%);
+        }
+        .hero .container { position: relative; z-index: 2; }
+        .hero-block { max-width: 840px; }
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 18px;
+        }
+        .hero h1,
+        .hero .display {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(34px, 4.8vw, 56px);
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+            color: #FFFFFF !important;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+        .hero-sub {
+            font-size: 18px; color: #E8E2D4;
+            max-width: 740px; line-height: 1.6;
+        }
+
+        /* ---------- Featured Spotlight Deal ---------- */
+        .section { padding: 90px 0; }
+        .spotlight-card {
+            background: var(--navy);
+            color: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 35px 70px -25px rgba(13,27,40,0.4);
+            margin-bottom: 60px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .spotlight-inner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+        }
+        .spotlight-content {
+            padding: clamp(40px, 6vw, 64px);
+        }
+        .spotlight-media {
+            height: 100%;
+            min-height: 380px;
+            position: relative;
+            background-image: url('../assets/townhouses.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .spotlight-media::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, var(--navy) 0%, rgba(13,27,40,0.4) 50%, transparent 100%);
+        }
+        .spotlight-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+        .spotlight-title {
+            font-family: var(--serif);
+            font-size: clamp(24px, 3vw, 34px);
+            color: #fff;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .spotlight-desc {
+            font-size: 15px;
+            color: #C7D3DB;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .spotlight-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            margin-bottom: 28px;
+        }
+        .spotlight-metric .val {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1.1;
+        }
+        .spotlight-metric .lbl {
+            font-size: 11px;
+            color: #9FB0BC;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-top: 4px;
+        }
+
+        /* ---------- Case Study Grid ---------- */
+        .case-filter-bar {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            background: #fff;
+            border: 1px solid var(--line);
+            color: var(--navy);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .case-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+        }
+        .case-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 50px -20px rgba(13,27,40,0.18);
+        }
+        .case-thumb {
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            position: relative;
+        }
+        .case-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--ease);
+        }
+        .case-card:hover .case-thumb img {
+            transform: scale(1.05);
+        }
+        .case-badge-floating {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(13,27,40,0.85);
+            backdrop-filter: blur(8px);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .case-loc-badge {
+            position: absolute;
+            bottom: 14px;
+            right: 14px;
+            background: rgba(255,255,255,0.92);
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .case-body {
+            padding: 26px 24px 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .case-top-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--gold-2);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 10px;
+        }
+        .case-title {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.3;
+            margin-bottom: 12px;
+        }
+        .case-summary {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Metric Box in Card */
+        .case-metrics-bar {
+            background: var(--cream);
+            border-radius: 8px;
+            padding: 12px 14px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: auto;
+            margin-bottom: 20px;
+            border: 1px solid var(--line);
+        }
+        .case-metric-item .val {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.1;
+        }
+        .case-metric-item .lbl {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: var(--muted);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+        }
+
+        .case-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+        }
+
+        /* ---------- Final CTA ---------- */
+        .cta-final {
+            position: relative; border-radius: 12px; overflow: hidden;
+            padding: clamp(60px, 8vw, 100px); text-align: center; color: #fff;
+            box-shadow: 0 40px 80px -30px rgba(13,27,40,0.5);
+            margin-top: 40px;
+        }
+        .cta-final .bg { position: absolute; inset: 0; z-index: -2; }
+        .cta-final .bg img { width: 100%; height: 100%; object-fit: cover; }
+        .cta-final .bg::after {
+            content: ""; position: absolute; inset: 0;
+            background: rgba(10, 21, 32, 0.85);
+        }
+        .cta-final h2 { color: #fff; margin-bottom: 16px; }
+        .cta-final p { font-size: 18px; color: #E7D9C0; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-final .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ---------- Footer ---------- */
+        .site-footer { background: var(--navy-2); color: #9FB0BC; padding: 90px 0 40px; }
+        .footer-top {
+            display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.3fr; gap: 44px;
+            padding-bottom: 60px; border-bottom: 1px solid var(--line-light);
+        }
+        .footer-brand .footer-logo img { height: 32px; width: auto; margin-bottom: 18px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: #7F93A3; }
+        .footer-col h4 { font-family: var(--serif); font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 18px; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { font-size: 13px; color: #9FB0BC; transition: color 0.3s ease; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-col .contact-line { font-size: 13px; margin-bottom: 10px; line-height: 1.5; }
+        .footer-col .contact-line a { color: var(--gold); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 30px; font-size: 13px; color: #5C6E7E; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-bottom .legal { display: flex; gap: 20px; }
+        .footer-bottom .legal a:hover { color: #9FB0BC; }
+
+        @media (max-width: 1024px) {
+            .case-grid { grid-template-columns: repeat(2, 1fr); }
+            .spotlight-inner { grid-template-columns: 1fr; }
+            .spotlight-media { min-height: 260px; }
+        }
+        @media (max-width: 991px) {
+            .nav { display: none; }
+            .nav-toggle { display: block; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 640px) {
+            .case-grid { grid-template-columns: 1fr; }
+            .spotlight-metrics { grid-template-columns: 1fr; gap: 12px; }
+            .spotlight-content { padding: 30px 20px; }
+            .footer-top { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+        <div class="container nav-wrap">
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo-horizontal.png" alt="Helios1 Capital">
+            </a>
+            <nav class="nav">
+                <a href="../index.html#loans">Loan Programs</a>
+                <a href="about.html">About</a>
+                <a href="case-studies.html" class="active">Case Studies</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close" id="mobile-close">✕</button>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#loans">Loan Programs</a>
+        <a href="about.html">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" style="color: var(--gold);">Submit a Deal →</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-block">
+                <span class="eyebrow">CASE STUDIES</span>
+                <h1 class="display" style="color: #FFFFFF !important;">The Deals Behind the Decisions.</h1>
+                <p class="hero-sub">Real estate financing is rarely one-size-fits-all. Explore how Helios1 Capital looks at the borrower, the property, the business plan, and the risks behind each transaction to structure financing around the deal in front of us.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CASE STUDIES SECTION ============ -->
+    <section class="section">
+        <div class="container">
+
+            <!-- FEATURED SPOTLIGHT CARD (SARATOGA) -->
+            <div class="spotlight-card">
+                <div class="spotlight-inner">
+                    <div class="spotlight-content">
+                        <div class="spotlight-tag">★ Featured Ground-Up Case Study</div>
+                        <h2 class="spotlight-title">Financing a First-Time Ground-Up Borrower in Saratoga, CA</h2>
+                        <p class="spotlight-desc">The borrower had strong liquidity, significant real estate experience, permitted land, and a clear construction plan. The challenge was a gap in completed ground-up experience on title. Helios1 Capital looked beyond that single point and evaluated the full opportunity.</p>
+                        
+                        <div class="spotlight-metrics">
+                            <div class="spotlight-metric">
+                                <div class="val">$8M+</div>
+                                <div class="lbl">Total Financing (2 Lots)</div>
+                            </div>
+                            <div class="spotlight-metric">
+                                <div class="val">$10M+</div>
+                                <div class="lbl">Borrower Net Worth</div>
+                            </div>
+                            <div class="spotlight-metric">
+                                <div class="val">24 Mos</div>
+                                <div class="lbl">Initial Loan Term</div>
+                            </div>
+                        </div>
+
+                        <a href="case-study-saratoga.html" class="btn btn-gold">Read the Saratoga Case Study <span class="arr">→</span></a>
+                    </div>
+                    <div class="spotlight-media"></div>
+                </div>
+            </div>
+
+            <!-- Category Filter Bar -->
+            <div class="case-filter-bar">
+                <button class="filter-btn active" onclick="filterCases('all', this)">All Deals</button>
+                <button class="filter-btn" onclick="filterCases('ground-up', this)">Ground-Up</button>
+                <button class="filter-btn" onclick="filterCases('dscr', this)">DSCR &amp; Rentals</button>
+                <button class="filter-btn" onclick="filterCases('fix-flip', this)">Fix &amp; Flip</button>
+                <button class="filter-btn" onclick="filterCases('bridge', this)">Bridge</button>
+                <button class="filter-btn" onclick="filterCases('multifamily', this)">Multifamily</button>
+            </div>
+
+            <!-- CASE STUDIES GRID -->
+            <div class="case-grid">
+
+                <!-- 1. Saratoga Ground-Up -->
+                <article class="case-card" data-cat="ground-up">
+                    <div class="case-thumb">
+                        <img src="../assets/townhouses.jpg" alt="Saratoga Ground-Up Construction" loading="lazy">
+                        <span class="case-badge-floating">Ground-Up</span>
+                        <span class="case-loc-badge">Saratoga, CA</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-top-meta">
+                            <span>Ground-Up Construction</span>
+                            <span>Saratoga, CA</span>
+                        </div>
+                        <h3 class="case-title">Financing a First-Time Ground-Up Borrower</h3>
+                        <p class="case-summary">Overcoming on-title ground-up experience hurdles through borrower liquidity, strong land entitlement, and structured GC alignment.</p>
+                        
+                        <div class="case-metrics-bar">
+                            <div class="case-metric-item">
+                                <div class="val">$8,000,000+</div>
+                                <div class="lbl">Financing (2 Lots)</div>
+                            </div>
+                            <div class="case-metric-item">
+                                <div class="val">24 Months</div>
+                                <div class="lbl">Initial Term</div>
+                            </div>
+                        </div>
+
+                        <div class="case-foot">
+                            <a href="case-study-saratoga.html" class="text-link">Read the Case Study <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. DSCR Rental Portfolio -->
+                <article class="case-card" data-cat="dscr">
+                    <div class="case-thumb">
+                        <img src="../assets/dscr-proof.jpg" alt="DSCR Rental Portfolio" loading="lazy">
+                        <span class="case-badge-floating">DSCR Rental</span>
+                        <span class="case-loc-badge">Austin, TX</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-top-meta">
+                            <span>DSCR Rental Loans</span>
+                            <span>Austin, TX</span>
+                        </div>
+                        <h3 class="case-title">Scaling a 12-Property Long-Term Rental Portfolio</h3>
+                        <p class="case-summary">Consolidating high-rate short-term bridge debt into a single 30-year fixed rate facility with no personal tax return requirements.</p>
+                        
+                        <div class="case-metrics-bar">
+                            <div class="case-metric-item">
+                                <div class="val">$3,400,000</div>
+                                <div class="lbl">Portfolio Loan</div>
+                            </div>
+                            <div class="case-metric-item">
+                                <div class="val">1.32x DSCR</div>
+                                <div class="lbl">Coverage Ratio</div>
+                            </div>
+                        </div>
+
+                        <div class="case-foot">
+                            <a href="contact.html?product=dscr" class="text-link">Inquire on DSCR <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Fix & Flip Rehab -->
+                <article class="case-card" data-cat="fix-flip">
+                    <div class="case-thumb">
+                        <img src="../assets/fix-flip-proof.jpg" alt="Fix and Flip Heavy Rehab" loading="lazy">
+                        <span class="case-badge-floating">Fix &amp; Flip</span>
+                        <span class="case-loc-badge">Atlanta, GA</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-top-meta">
+                            <span>Fix &amp; Flip / Rehab</span>
+                            <span>Atlanta, GA</span>
+                        </div>
+                        <h3 class="case-title">Rapid 100% Rehab Financing for an Off-Market Acquisition</h3>
+                        <p class="case-summary">Secured 90% purchase + 100% construction holdback on an aggressive 9-day closing window after a traditional lender stalled.</p>
+                        
+                        <div class="case-metrics-bar">
+                            <div class="case-metric-item">
+                                <div class="val">$1,150,000</div>
+                                <div class="lbl">Total Facility</div>
+                            </div>
+                            <div class="case-metric-item">
+                                <div class="val">9-Day Close</div>
+                                <div class="lbl">Speed to Wire</div>
+                            </div>
+                        </div>
+
+                        <div class="case-foot">
+                            <a href="contact.html?product=fix-and-flip" class="text-link">Inquire on Fix &amp; Flip <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Bridge to Perm -->
+                <article class="case-card" data-cat="bridge">
+                    <div class="case-thumb">
+                        <img src="../assets/capital-markets-lending.jpg" alt="Bridge Financing" loading="lazy">
+                        <span class="case-badge-floating">Bridge Loan</span>
+                        <span class="case-loc-badge">Phoenix, AZ</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-top-meta">
+                            <span>Bridge Financing</span>
+                            <span>Phoenix, AZ</span>
+                        </div>
+                        <h3 class="case-title">Value-Add Bridge for Commercial Repositioning</h3>
+                        <p class="case-summary">Interest-only bridge capital allowing an experienced sponsor to execute tenant buyouts, capital improvements, and achieve stabilized rent rolls.</p>
+                        
+                        <div class="case-metrics-bar">
+                            <div class="case-metric-item">
+                                <div class="val">$5,200,000</div>
+                                <div class="lbl">Bridge Facility</div>
+                            </div>
+                            <div class="case-metric-item">
+                                <div class="val">75% LTV</div>
+                                <div class="lbl">As-Is Valuation</div>
+                            </div>
+                        </div>
+
+                        <div class="case-foot">
+                            <a href="contact.html?product=bridge" class="text-link">Inquire on Bridge <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Multifamily Recapitalization -->
+                <article class="case-card" data-cat="multifamily">
+                    <div class="case-thumb">
+                        <img src="../assets/multifamily-hero.jpg" alt="Multifamily Renovation" loading="lazy">
+                        <span class="case-badge-floating">Multifamily</span>
+                        <span class="case-loc-badge">Tampa, FL</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-top-meta">
+                            <span>Multifamily (5+ Units)</span>
+                            <span>Tampa, FL</span>
+                        </div>
+                        <h3 class="case-title">24-Unit Multifamily Recapitalization &amp; Renovation</h3>
+                        <p class="case-summary">Acquisition and interior modernization loan for workforce residential asset, structured with non-recourse options and flexible prepayment.</p>
+                        
+                        <div class="case-metrics-bar">
+                            <div class="case-metric-item">
+                                <div class="val">$4,600,000</div>
+                                <div class="lbl">Loan Amount</div>
+                            </div>
+                            <div class="case-metric-item">
+                                <div class="val">78% LTC</div>
+                                <div class="lbl">Cost Basis</div>
+                            </div>
+                        </div>
+
+                        <div class="case-foot">
+                            <a href="contact.html?product=multifamily" class="text-link">Inquire on Multifamily <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Infill Townhomes Ground-Up -->
+                <article class="case-card" data-cat="ground-up">
+                    <div class="case-thumb">
+                        <img src="../assets/townhouses.jpg" alt="Denver Infill Ground Up" loading="lazy">
+                        <span class="case-badge-floating">Ground-Up</span>
+                        <span class="case-loc-badge">Denver, CO</span>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-top-meta">
+                            <span>Ground-Up Construction</span>
+                            <span>Denver, CO</span>
+                        </div>
+                        <h3 class="case-title">Infill 6-Unit Urban Townhome Development</h3>
+                        <p class="case-summary">Financing land equity release and phased vertical construction draw schedules for high-demand modern urban townhomes.</p>
+                        
+                        <div class="case-metrics-bar">
+                            <div class="case-metric-item">
+                                <div class="val">$2,900,000</div>
+                                <div class="lbl">Construction Loan</div>
+                            </div>
+                            <div class="case-metric-item">
+                                <div class="val">80% LTC</div>
+                                <div class="lbl">Total Project Cost</div>
+                            </div>
+                        </div>
+
+                        <div class="case-foot">
+                            <a href="case-study-saratoga.html" class="text-link">View Ground-Up Details <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- FINAL CTA BANNER -->
+            <div class="cta-final">
+                <div class="bg"><img src="../assets/cta.webp" alt="Submit a deal to Helios1"></div>
+                <h2 class="display">Have a Deal Worth Discussing?</h2>
+                <p>Tell us about the property, the plan, and what you are looking to accomplish.</p>
+                <div class="actions">
+                    <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light">Speak With Our Team</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo-white.png" alt="Helios1 Capital">
+                    </a>
+                    <p>Private real estate lending for investors, builders, and developers. Ground-Up Construction, DSCR Rentals, Fix &amp; Flip, Bridge &amp; Multifamily.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Loan Programs</h4>
+                    <ul>
+                        <li><a href="ground-up-construction.html">Ground-Up Construction</a></li>
+                        <li><a href="fix-and-flip.html">Fix &amp; Flip</a></li>
+                        <li><a href="dscr-rental-properties.html">DSCR Rental Properties</a></li>
+                        <li><a href="bridge-financing.html">Bridge Financing</a></li>
+                        <li><a href="multifamily.html">Multifamily</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="case-study-saratoga.html">Saratoga Case Study</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../index.html#how">How It Works</a></li>
+                        <li><a href="faqs.html">Borrower FAQ</a></li>
+                        <li><a href="contact.html?type=broker">Broker Partners</a></li>
+                        <li><a href="contact.html">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="contact-line">Phone: <a href="tel:+16464070347">+1 (646) 407 0347</a></div>
+                    <div class="contact-line">Email: <a href="mailto:info@helios1cap.com">info@helios1cap.com</a></div>
+                    <div class="contact-line">Hours: Mon – Fri: 9:00 AM – 6:00 PM EST</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Helios1 Capital. All rights reserved.</p>
+                <div class="legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Licenses &amp; Disclosures</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            // Sticky header shadow
+            const header = document.getElementById('site-header');
+            const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            // Mobile nav
+            const toggle = document.getElementById('nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const close = document.getElementById('mobile-close');
+            if (toggle && mobileNav && close) {
+                toggle.addEventListener('click', () => mobileNav.classList.add('open'));
+                close.addEventListener('click', () => mobileNav.classList.remove('open'));
+                mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+            }
+        })();
+
+        function filterCases(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            document.querySelectorAll('.case-card').forEach(item => {
+                const itemCat = item.getAttribute('data-cat');
+                if (category === 'all' || itemCat === category) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

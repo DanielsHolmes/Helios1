@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="About Helios1 Capital. Experience behind every conversation in private real estate lending, capital markets, and structured finance.">
+    <title>About Us | Experience Behind Every Conversation | Helios1 Capital</title>
+    <link rel="icon" type="image/svg+xml" href="../Helios1_Logos/SVG File-01 (1).svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        :root {
+            --navy: #0D1B28;
+            --navy-2: #0A1520;
+            --ink: #10202E;
+            --gold: #F39F0E;
+            --gold-2: #E08E06;
+            --cream: #FBF8F2;
+            --cream-2: #F4EFE6;
+            --white: #FFFFFF;
+            --muted: #5C6B77;
+            --line: rgba(13, 27, 40, 0.12);
+            --line-light: rgba(255, 255, 255, 0.14);
+            --serif: "Poppins", -apple-system, sans-serif;
+            --sans: "Manrope", -apple-system, sans-serif;
+            --container: 1200px;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+        .display {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+        }
+        .section-dark .display { color: #F3EFE6; }
+
+        .lead { font-size: 18px; color: var(--muted); line-height: 1.6; }
+        .section-dark .lead { color: #9FB0BC; }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            padding: 15px 28px;
+            border-radius: 100px;
+            transition: all 0.35s var(--ease);
+            cursor: pointer;
+            border: 1px solid transparent;
+            line-height: 1;
+        }
+        .btn .arr { transition: transform 0.35s var(--ease); }
+        .btn:hover .arr { transform: translateX(4px); }
+        .btn-gold { background: var(--gold); color: var(--navy); }
+        .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); box-shadow: 0 16px 34px -14px rgba(243, 159, 14, 0.7); }
+        .btn-outline { border-color: var(--navy); color: var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: var(--cream); }
+        .btn-outline-light { border-color: rgba(255,255,255,0.4); color: #fff; }
+        .btn-outline-light:hover { background: #fff; color: var(--navy); }
+
+        .text-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-weight: 700; font-size: 14px; letter-spacing: 0.02em;
+            color: var(--navy); position: relative; padding-bottom: 4px;
+        }
+        .text-link::after {
+            content: ""; position: absolute; left: 0; bottom: 0;
+            width: 100%; height: 1px; background: var(--gold);
+            transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .text-link:hover::after { transform: scaleX(1); transform-origin: left; }
+        .text-link .arr { color: var(--gold-2); transition: transform 0.35s var(--ease); }
+        .text-link:hover .arr { transform: translateX(4px); }
+
+        /* ---------- Header ---------- */
+        .site-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(251, 248, 242, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+            transition: box-shadow 0.3s ease;
+        }
+        .site-header.scrolled { box-shadow: 0 10px 40px -20px rgba(13,27,40,0.35); }
+        .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 24px; }
+        .brand img { height: 32px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a { font-size: 13px; font-weight: 600; color: var(--ink); position: relative; padding: 6px 0; white-space: nowrap; }
+        .nav a::after {
+            content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+            background: var(--gold); transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .nav a:hover::after, .nav a.active::after { transform: scaleX(1); transform-origin: left; }
+        .nav a.active { color: var(--navy); font-weight: 700; }
+        .nav-cta { display: flex; align-items: center; gap: 18px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 4px 0; }
+
+        .mobile-nav {
+            position: fixed; inset: 0; background: var(--navy); color: #fff; z-index: 999;
+            display: flex; flex-direction: column; justify-content: center; padding: 80px 32px;
+            transform: translateX(100%); transition: transform 0.5s var(--ease);
+        }
+        .mobile-nav.open { transform: translateX(0); }
+        .mobile-nav a { font-family: var(--serif); font-size: 24px; color: #fff; padding: 12px 0; }
+        .mobile-nav .close { position: absolute; top: 28px; right: 32px; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            position: relative;
+            padding: 160px 0 100px;
+            color: #fff;
+            background: var(--navy-2);
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background-image: url('../assets/about-hero-bg.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            opacity: 0.38;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(10,21,32,0.45) 0%, rgba(10,21,32,0.88) 100%);
+        }
+        .hero .container { position: relative; z-index: 2; }
+        .hero-block { max-width: 840px; }
+        .eyebrow {
+            display: inline-block;
+            font-size: 12px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 18px;
+        }
+        .hero h1,
+        .hero .display {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(34px, 4.8vw, 56px);
+            line-height: 1.08;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            color: #FFFFFF !important;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        }
+        .hero-sub {
+            font-size: 19px; color: #F3EFE6;
+            max-width: 740px; margin-bottom: 20px; line-height: 1.6;
+        }
+        .hero-copy { font-size: 16px; color: #C7D3DB; max-width: 700px; margin-bottom: 34px; line-height: 1.7; }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        /* ---------- Sections Common ---------- */
+        .section { padding: 100px 0; }
+        .section-dark { background: var(--navy); color: #EAF0F4; }
+        .section-cream { background: var(--cream); }
+
+        /* ---------- The Story Behind Helios1 ---------- */
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        .story-text h2 { margin-bottom: 24px; }
+        .story-text p { color: var(--muted); font-size: 16px; margin-bottom: 18px; }
+        .story-text p strong { color: var(--navy); }
+        
+        .story-image-wrap {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px -20px rgba(13,27,40,0.3);
+        }
+        .story-image-wrap img { width: 100%; height: 440px; object-fit: cover; }
+        .story-badge {
+            position: absolute; bottom: 24px; left: 24px; right: 24px;
+            background: rgba(13, 27, 40, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 20px 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .story-badge .badge-title { font-family: var(--serif); font-size: 18px; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+        .story-badge p { font-size: 13px; color: #C7D3DB; margin: 0; }
+
+        /* ---------- 4 Priorities / Pillars ---------- */
+        .pillars-section { background: var(--navy-2); color: #fff; }
+        .pillars-head { text-align: center; max-width: 680px; margin: 0 auto 56px; }
+        .pillars-head h2 { color: #fff; margin-bottom: 16px; }
+        .pillars-head .lead { color: #FFFFFF !important; }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .pillar-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 34px 28px;
+            position: relative;
+            transition: all 0.35s var(--ease);
+        }
+        .pillar-card:hover {
+            background: rgba(255,255,255,0.06);
+            transform: translateY(-4px);
+            border-color: var(--gold);
+        }
+        .pillar-num {
+            font-family: var(--serif);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+        .pillar-card h3 {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+        .pillar-card p {
+            font-size: 14px;
+            color: #9FB0BC;
+            line-height: 1.6;
+        }
+
+        /* ---------- The People Behind Helios1 (Team) ---------- */
+        .team-head { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+        .team-head h2 { margin-bottom: 16px; }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .team-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 40px -20px rgba(13,27,40,0.12);
+            transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+        }
+        .team-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 60px -25px rgba(13,27,40,0.22);
+        }
+        
+        .team-photo-wrap {
+            position: relative;
+            background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 100%);
+            height: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 3px solid var(--gold);
+        }
+        .team-photo-wrap::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(243, 159, 14, 0.12) 0%, transparent 70%);
+        }
+        .team-avatar-placeholder {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            border: 2px solid rgba(243, 159, 14, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        .team-initials {
+            font-family: var(--serif);
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+        .team-placeholder-badge {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(13, 27, 40, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 11px;
+            color: #C7D3DB;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .team-body {
+            padding: 36px 32px 32px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .team-name {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+        .team-role {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gold-2);
+            margin-bottom: 20px;
+        }
+        .team-bio {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .team-bio p { margin-bottom: 14px; }
+        .team-bio p:last-child { margin-bottom: 0; }
+        
+        .team-tags {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .team-tag {
+            background: var(--cream);
+            border: 1px solid var(--line);
+            border-radius: 100px;
+            padding: 4px 12px;
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--navy);
+            letter-spacing: 0.04em;
+        }
+
+        /* ---------- Redesigned Experience & Relationship Section ---------- */
+        .exp-relationship-section {
+            padding: 90px 0;
+            background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+            position: relative;
+        }
+        .exp-card-master {
+            background: #FFFFFF;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: clamp(36px, 5vw, 64px);
+            box-shadow: 0 25px 60px -20px rgba(13, 27, 40, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .exp-card-master::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-2) 50%, var(--navy) 100%);
+        }
+        .exp-header-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: flex-end;
+            margin-bottom: 48px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--line);
+        }
+        .eyebrow-badge-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold-2);
+            background: rgba(243, 159, 14, 0.1);
+            border: 1px solid rgba(243, 159, 14, 0.25);
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 18px;
+        }
+        .exp-header-left h2 {
+            font-size: clamp(30px, 3.8vw, 42px);
+            line-height: 1.15;
+            color: var(--navy);
+            margin: 0;
+        }
+        .highlight-gold {
+            color: var(--gold-2);
+        }
+        .exp-intro-text {
+            font-size: 17px;
+            line-height: 1.65;
+            color: var(--muted);
+            margin: 0;
+        }
+        
+        .exp-pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 44px;
+        }
+        .exp-pillar-card {
+            background: var(--cream);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 32px 26px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
+        }
+        .exp-pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px -15px rgba(13, 27, 40, 0.12);
+            border-color: rgba(243, 159, 14, 0.4);
+        }
+        .pillar-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: var(--navy);
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 18px -6px rgba(13, 27, 40, 0.25);
+        }
+        .pillar-icon-box .material-symbols-outlined {
+            font-size: 24px;
+        }
+        .exp-pillar-card h3 {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+            line-height: 1.25;
+        }
+        .exp-pillar-card p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .exp-footer-banner {
+            background: linear-gradient(135deg, var(--navy-2) 0%, var(--navy) 100%);
+            border-radius: 14px;
+            padding: 26px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px -15px rgba(10, 21, 32, 0.4);
+        }
+        .exp-footer-quote {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .quote-symbol {
+            font-family: var(--serif);
+            font-size: 36px;
+            line-height: 1;
+            color: var(--gold);
+            font-style: italic;
+        }
+        .quote-text {
+            font-family: var(--serif);
+            font-size: 17px;
+            font-style: italic;
+            color: #E8EEF2;
+            font-weight: 400;
+        }
+        .exp-footer-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            flex-shrink: 0;
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            padding-left: 28px;
+        }
+        .tagline-kicker {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2px;
+        }
+        .tagline-val {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 700;
+            color: #FFFFFF;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 991px) {
+            .exp-header-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .exp-pillars-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .exp-footer-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px 20px;
+            }
+            .exp-footer-badge {
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                padding-left: 0;
+                padding-top: 16px;
+                width: 100%;
+                align-items: flex-start;
+            }
+        }
+
+        /* ---------- Final CTA ---------- */
+        .cta-final {
+            position: relative; border-radius: 12px; overflow: hidden;
+            padding: clamp(60px, 8vw, 100px); text-align: center; color: #fff;
+            box-shadow: 0 40px 80px -30px rgba(13,27,40,0.5);
+        }
+        .cta-final .bg { position: absolute; inset: 0; z-index: -2; }
+        .cta-final .bg img { width: 100%; height: 100%; object-fit: cover; }
+        .cta-final .bg::after {
+            content: ""; position: absolute; inset: 0;
+            background: rgba(10, 21, 32, 0.85);
+        }
+        .cta-final h2 { color: #fff; margin-bottom: 16px; }
+        .cta-final p { font-size: 18px; color: #E7D9C0; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-final .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ---------- Footer ---------- */
+        .site-footer { background: var(--navy-2); color: #9FB0BC; padding: 90px 0 40px; }
+        .footer-top {
+            display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.3fr; gap: 44px;
+            padding-bottom: 60px; border-bottom: 1px solid var(--line-light);
+        }
+        .footer-brand .footer-logo img { height: 32px; width: auto; margin-bottom: 18px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: #7F93A3; }
+        .footer-col h4 { font-family: var(--serif); font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 18px; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { font-size: 13px; color: #9FB0BC; transition: color 0.3s ease; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-col .contact-line { font-size: 13px; margin-bottom: 10px; line-height: 1.5; }
+        .footer-col .contact-line a { color: var(--gold); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 30px; font-size: 13px; color: #5C6E7E; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-bottom .legal { display: flex; gap: 20px; }
+        .footer-bottom .legal a:hover { color: #9FB0BC; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 991px) {
+            .nav { display: none; }
+            .nav-toggle { display: block; }
+            .story-grid { grid-template-columns: 1fr; gap: 40px; }
+            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 560px) {
+            .pillars-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+            .hero { padding: 130px 0 70px; }
+            .section { padding: 70px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+        <div class="container nav-wrap">
+            <a href="../index.html" class="brand">
+                <img src="../assets/logo-horizontal.png" alt="Helios1 Capital">
+            </a>
+            <nav class="nav">
+                <a href="../index.html#loans">Loan Programs</a>
+                <a href="about.html" class="active">About</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close" id="mobile-close" aria-label="Close menu"><span class="material-symbols-outlined" style="font-size: 28px;">close</span></button>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#loans">Loan Programs</a>
+        <a href="about.html">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" style="color: var(--gold);">Submit a Deal →</a>
+    </div>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-block">
+                <span class="eyebrow">ABOUT HELIOS1 CAPITAL</span>
+                <h1 class="display">Experience Behind Every Conversation.</h1>
+                <p class="hero-sub">Helios1 Capital brings together decades of experience across mortgage lending, capital markets, structured finance, and real estate.</p>
+                <p class="hero-copy">That experience matters, but so does how it is used. For us, it means asking better questions, staying close to the borrower, and bringing clarity to conversations that can become complicated quickly.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light">Speak With Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ THE STORY BEHIND HELIOS1 ============ -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-text">
+                    <span class="eyebrow" style="color: var(--gold-2);">OUR PHILOSOPHY</span>
+                    <h2 class="display">The Story Behind Helios1</h2>
+                    <p class="lead" style="margin-bottom: 20px;">Real estate financing is built on numbers, but the relationship behind the deal still matters.</p>
+                    <p>Helios1 Capital works with investors and builders who want more than a transaction. They want people on the other side who understand the market, understand capital, and can have a direct conversation about what they are trying to accomplish.</p>
+                    <p>The team’s background comes from <strong>Wall Street, mortgage markets, structured finance, and institutional capital</strong>. Helios1 brings that experience into a more personal lending environment, where the borrower, the opportunity, and the relationship all matter.</p>
+                    <div style="margin-top: 28px;">
+                        <a href="case-studies.html" class="text-link">Explore How We Structure Deals <span class="arr">→</span></a>
+                    </div>
+                </div>
+                <div class="story-image-wrap">
+                    <img src="../assets/capital-markets-lending.jpg" alt="Helios1 Capital Markets and Real Estate Financing">
+                    <div class="story-badge">
+                        <div class="badge-title">Institutional Rigor • Direct Access</div>
+                        <p>Bridging Wall Street credit discipline with entrepreneurial borrower needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 4 PRIORITIES / PILLARS ============ -->
+    <section class="section pillars-section">
+        <div class="container">
+            <div class="pillars-head">
+                <span class="eyebrow">OUR CORE PRINCIPLES</span>
+                <h2 class="display">Principles That Shape How We Lend</h2>
+                <p class="lead" style="color: #FFFFFF !important;">Those principles have shaped how Helios1 Capital wants to grow and how the team works with borrowers today.</p>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-num">01</div>
+                    <h3>Execution</h3>
+                    <p>Responsive, dependable closings backed by certainty of capital and clear milestone tracking.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-num">02</div>
+                    <h3>Transparency</h3>
+                    <p>No unexpected changes or hidden conditions. We discuss the real economics upfront from day one.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-num">03</div>
+                    <h3>Trust</h3>
+                    <p>Direct communication with senior decision-makers who know credit and evaluate risk realistically.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-num">04</div>
+                    <h3>Lasting Relationships</h3>
+                    <p>Partnerships that continue beyond one transaction as your portfolio and projects expand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ THE PEOPLE BEHIND HELIOS1 ============ -->
+    <section class="section section-cream" id="team">
+        <div class="container">
+            <div class="team-head">
+                <span class="eyebrow" style="color: var(--gold-2);">LEADERSHIP &amp; EXPERTISE</span>
+                <h2 class="display">The People Behind Helios1.</h2>
+                <p class="lead">Decades of leadership on institutional trading desks and structured finance desks, brought directly to private real estate borrowers.</p>
+            </div>
+            <div class="team-grid">
+                <!-- Rishi Sangal -->
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <div class="team-avatar-placeholder">
+                            <span class="team-initials">RS</span>
+                            <span style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #9FB0BC; margin-top: 4px;">Executive</span>
+                        </div>
+                        <span class="team-placeholder-badge">Executive Leadership</span>
+                    </div>
+                    <div class="team-body">
+                        <h3 class="team-name">Rishi Sangal</h3>
+                        <div class="team-role">Founder &amp; CEO</div>
+                        <div class="team-bio">
+                            <p>Rishi Sangal brings more than 20 years of Wall Street experience across fixed income trading and mortgage capital markets.</p>
+                            <p>His career includes leadership in residential mortgage-backed securities (RMBS) trading at <strong>BNP Paribas</strong>, along with roles at <strong>BlackRock, RBS, Performance Trust, and Odeon</strong>.</p>
+                            <p>That background gave him a close view of how credit is evaluated, how risk is priced, and how capital moves through different market environments.</p>
+                            <p>At Helios1 Capital, Rishi brings that experience into real estate financing, working directly with borrowers and applying institutional market knowledge to individual transactions.</p>
+                        </div>
+                        <div class="team-tags">
+                            <span class="team-tag">Fixed Income Trading</span>
+                            <span class="team-tag">RMBS Markets</span>
+                            <span class="team-tag">Risk Pricing</span>
+                            <span class="team-tag">Direct Lending</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thomas Carey, CFA -->
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <div class="team-avatar-placeholder">
+                            <span class="team-initials">TC</span>
+                            <span style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: #9FB0BC; margin-top: 4px;">CFA</span>
+                        </div>
+                        <span class="team-placeholder-badge">Advisory &amp; Consulting</span>
+                    </div>
+                    <div class="team-body">
+                        <h3 class="team-name">Thomas Carey, CFA</h3>
+                        <div class="team-role">Senior Consultant</div>
+                        <div class="team-bio">
+                            <p>Thomas Carey brings more than 25 years of experience across capital markets, structured finance, investor relations, and business development.</p>
+                            <p>His career has included senior roles at <strong>Credit Suisse, BNP Paribas, and Société Générale</strong>, with deep experience across mortgage-backed securities, structured products, institutional capital, and alternative credit.</p>
+                            <p>At Helios1 Capital, Tom works with real estate investors, developers, and strategic partners across acquisitions, refinances, rental portfolios, renovations, and new construction.</p>
+                            <p>His role combines financial experience with something equally important: staying close to the borrower, understanding the objective, and helping keep the conversation clear from start to finish.</p>
+                        </div>
+                        <div class="team-tags">
+                            <span class="team-tag">CFA Charterholder</span>
+                            <span class="team-tag">Structured Finance</span>
+                            <span class="team-tag">Capital Markets</span>
+                            <span class="team-tag">Strategic Advisory</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ EXPERIENCE MATTERS / RELATIONSHIP ============ -->
+    <section class="exp-relationship-section">
+        <div class="container">
+            <div class="exp-card-master">
+                
+                <!-- Header part -->
+                <div class="exp-header-grid">
+                    <div class="exp-header-left">
+                        <div class="eyebrow-badge-gold">
+                            <span class="material-symbols-outlined" style="font-size: 16px;">handshake</span>
+                            <span>LONG-TERM PARTNERSHIP</span>
+                        </div>
+                        <h2 class="display">Experience Matters.<br><span class="highlight-gold">So Does the Relationship.</span></h2>
+                    </div>
+                    <div class="exp-header-right">
+                        <p class="exp-intro-text">Real estate financing is never just a transaction. It is an ongoing relationship built on direct access, strategic clarity, and dependable capital as your portfolio expands.</p>
+                    </div>
+                </div>
+
+                <!-- 3 Relationship Pillars -->
+                <div class="exp-pillars-grid">
+                    
+                    <div class="exp-pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-outlined">trending_up</span>
+                        </div>
+                        <h3>Markets &amp; Projects Evolve</h3>
+                        <p>Markets change. Projects change. Borrowers grow from one transaction to the next. Your financing partner must have the sophistication to evolve alongside your business plan.</p>
+                    </div>
+
+                    <div class="exp-pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-outlined">support_agent</span>
+                        </div>
+                        <h3>Direct Senior Access</h3>
+                        <p>What should remain consistent is having people you can speak with directly, ask tough questions to, and receive decisive guidance from from term sheet to closing.</p>
+                    </div>
+
+                    <div class="exp-pillar-card">
+                        <div class="pillar-icon-box">
+                            <span class="material-symbols-outlined">repeat</span>
+                        </div>
+                        <h3>Built for the Next Opportunity</h3>
+                        <p>We take pride in being the capital partner our borrowers and brokers return to when the next opportunity comes up—delivering reliability deal after deal.</p>
+                    </div>
+
+                </div>
+
+                <!-- Bottom Banner / Brand Anchor -->
+                <div class="exp-footer-banner">
+                    <div class="exp-footer-quote">
+                        <span class="quote-symbol">“</span>
+                        <span class="quote-text">That is the kind of relationship Helios1 Capital is building.</span>
+                    </div>
+                    <div class="exp-footer-badge">
+                        <span class="tagline-kicker">CORE PHILOSOPHY</span>
+                        <span class="tagline-val">We Get the Deal.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section" style="padding-top: 60px;">
+        <div class="container">
+            <div class="cta-final">
+                <div class="bg"><img src="../assets/cta.webp" alt="Submit a deal to Helios1"></div>
+                <h2 class="display">Have a Deal Worth Discussing?</h2>
+                <p>Tell us about the property, the plan, and what you are looking to accomplish.</p>
+                <div class="actions">
+                    <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light">Speak With Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="footer-logo">
+                        <img src="../assets/logo-white.png" alt="Helios1 Capital">
+                    </a>
+                    <p>Private real estate lending for investors, builders, and developers. Ground-Up Construction, DSCR Rentals, Fix &amp; Flip, Bridge &amp; Multifamily.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Loan Programs</h4>
+                    <ul>
+                        <li><a href="ground-up-construction.html">Ground-Up Construction</a></li>
+                        <li><a href="fix-and-flip.html">Fix &amp; Flip</a></li>
+                        <li><a href="dscr-rental-properties.html">DSCR Rental Properties</a></li>
+                        <li><a href="bridge-financing.html">Bridge Financing</a></li>
+                        <li><a href="multifamily.html">Multifamily</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="case-study-saratoga.html">Saratoga Case Study</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../index.html#how">How It Works</a></li>
+                        <li><a href="faqs.html">Borrower FAQ</a></li>
+                        <li><a href="contact.html?type=broker">Broker Partners</a></li>
+                        <li><a href="contact.html">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="contact-line">Phone: <a href="tel:+16464070347">+1 (646) 407 0347</a></div>
+                    <div class="contact-line">Email: <a href="mailto:info@helios1cap.com">info@helios1cap.com</a></div>
+                    <div class="contact-line">Hours: Mon – Fri: 9:00 AM – 6:00 PM EST</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Helios1 Capital. All rights reserved.</p>
+                <div class="legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Licenses &amp; Disclosures</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            // Sticky header shadow
+            const header = document.getElementById('site-header');
+            const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 40);
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+
+            // Mobile nav
+            const toggle = document.getElementById('nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const close = document.getElementById('mobile-close');
+            if (toggle && mobileNav && close) {
+                toggle.addEventListener('click', () => mobileNav.classList.add('open'));
+                close.addEventListener('click', () => mobileNav.classList.remove('open'));
+                mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+            }
+        })();
+    </script>
+</body>
+</html>
