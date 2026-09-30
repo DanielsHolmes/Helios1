@@ -212,6 +212,7 @@
             margin-bottom: 8px;
         }
         .field label span.req { color: var(--gold-2); }
+        .field label span.opt { color: var(--muted); font-weight: 400; text-transform: none; font-size: 11px; margin-left: 4px; }
         .field input, .field select, .field textarea {
             width: 100%;
             padding: 14px 16px;
@@ -715,8 +716,8 @@
 
                             <!-- Location -->
                             <div class="field">
-                                <label for="location">Property Location (City &amp; State) <span class="req">*</span></label>
-                                <input type="text" id="location" name="location" placeholder="e.g. Austin, TX or Saratoga, CA" required>
+                                <label for="location">Property Location (City &amp; State) <span class="opt">(Optional)</span></label>
+                                <input type="text" id="location" name="location" placeholder="e.g. Austin, TX or Saratoga, CA">
                             </div>
 
                             <!-- Project or Question -->
