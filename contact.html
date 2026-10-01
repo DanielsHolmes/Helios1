@@ -427,6 +427,28 @@
             align-items: flex-start;
             gap: 6px;
         }
+        .checkbox-field {
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            accent-color: var(--gold);
+            cursor: pointer;
+            border-radius: 4px;
+        }
 
         /* Sidebar Cards */
         .contact-sidebar {
@@ -660,21 +682,12 @@
 
                             <!-- What can we help with? -->
                             <div class="field">
-                                <label>What can we help with? <span class="req">*</span></label>
-                                <div class="option-chips">
-                                    <label class="option-chip">
-                                        <input type="radio" name="help_type" value="Deal Financing" checked>
-                                        <span class="chip-label">Deal Financing</span>
-                                    </label>
-                                    <label class="option-chip">
-                                        <input type="radio" name="help_type" value="Broker or Referral Inquiry" id="chip-broker">
-                                        <span class="chip-label">Broker / Referral Inquiry</span>
-                                    </label>
-                                    <label class="option-chip">
-                                        <input type="radio" name="help_type" value="General Question">
-                                        <span class="chip-label">General Question</span>
-                                    </label>
-                                </div>
+                                <label for="helpType">What can we help with? <span class="req">*</span></label>
+                                <select id="helpType" name="help_type" required>
+                                    <option value="Deal Financing" selected>Deal Financing</option>
+                                    <option value="Broker or Referral Inquiry">Broker / Referral Inquiry</option>
+                                    <option value="General Question">General Question</option>
+                                </select>
                             </div>
 
                             <!-- Financing Interest -->
@@ -760,6 +773,14 @@
                                 <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: text-bottom; color: var(--gold);">lock</span>
                                 Strict confidentiality. We review deal submissions directly with zero credit pull to discuss terms.
                             </p>
+
+                            <!-- Consent Checkbox -->
+                            <div class="checkbox-field">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <span>By submitting this form, you consent to receive communications from Helios1 Capital regarding your inquiry and related services.</span>
+                                </label>
+                            </div>
 
                             <div class="form-step-actions">
                                 <button type="button" class="btn btn-outline btn-prev" onclick="prevStep(3)">← Back</button>
@@ -920,8 +941,8 @@
             const product = urlParams.get('product');
 
             if (type === 'broker') {
-                const brokerRadio = document.getElementById('chip-broker');
-                if (brokerRadio) brokerRadio.checked = true;
+                const helpSelect = document.getElementById('helpType');
+                if (helpSelect) helpSelect.value = 'Broker or Referral Inquiry';
             }
 
             if (product) {
@@ -936,11 +957,11 @@
         })();
 
         function selectBrokerTab() {
-            const brokerRadio = document.getElementById('chip-broker');
-            if (brokerRadio) {
-                brokerRadio.checked = true;
+            const helpSelect = document.getElementById('helpType');
+            if (helpSelect) {
+                helpSelect.value = 'Broker or Referral Inquiry';
                 document.getElementById('contact-form-section').scrollIntoView({ behavior: 'smooth' });
-                document.getElementById('fullName').focus();
+                helpSelect.focus();
             }
         }
 
