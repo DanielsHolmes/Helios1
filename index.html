@@ -691,7 +691,7 @@
         .showcase-progress {
             margin-top: 40px;
             height: 2px; background: rgba(13, 27, 40, 0.15);
-            width: 100%; max-width: 480px;
+            width: 100%;
         }
         .showcase-bar { height: 100%; background: var(--gold); width: 0%; }
 
@@ -700,6 +700,7 @@
             .showcase-head { flex-direction: column; align-items: flex-start; gap: 24px; }
             .showcase-track-wrap { overflow-x: auto; }
             .showcase-track { padding-left: 22px; }
+            .showcase-progress { display: none; }
         }
 
         /* ---------- About / Founder ---------- */
@@ -1260,9 +1261,7 @@
                     </article>
                 </div>
             </div>
-            <div class="container">
-                <div class="showcase-progress"><div class="showcase-bar" id="showcase-bar"></div></div>
-            </div>
+            <div class="showcase-progress"><div class="showcase-bar" id="showcase-bar"></div></div>
         </div>
     </section>
 
@@ -1393,7 +1392,7 @@
             <div class="footer-bottom">
                 <p>© 2026 Helios1 Capital. All rights reserved.</p>
                 <div class="legal">
-                    <a href="#">Privacy Policy</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
                     <a href="#">Licenses &amp; Disclosures</a>
                 </div>
@@ -1589,8 +1588,8 @@
                         scrollTrigger: {
                             trigger: section,
                             start: 'top top',
-                            end: () => '+=' + getDistance(),
-                            scrub: 1,
+                            end: () => '+=' + (getDistance() * 2.2),
+                            scrub: 1.2,
                             pin: true,
                             anticipatePin: 1,
                             onUpdate: (self) => {
