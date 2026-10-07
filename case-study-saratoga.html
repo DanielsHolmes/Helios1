@@ -158,9 +158,9 @@
         }
         .hero-bg {
             position: absolute; inset: 0;
-            background-image: url('assets/townhouses.jpg');
+            background-image: url('assets/saratoga-facade.jpg');
             background-size: cover; background-position: center;
-            opacity: 0.2;
+            opacity: 0.28;
         }
         .hero-overlay {
             position: absolute; inset: 0;
@@ -451,6 +451,244 @@
             display: block;
             border: 0;
         }
+
+        /* Story Image Showcase */
+        .story-img-wrap {
+            margin: 28px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 10px 30px -10px rgba(13,27,40,0.08);
+            background: var(--navy-2);
+        }
+        .story-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+        .story-img-caption {
+            padding: 12px 18px;
+            background: var(--cream-2);
+            font-size: 13.5px;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .story-img-caption strong { color: var(--navy); }
+        .story-img-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 28px 0;
+        }
+        @media (max-width: 600px) {
+            .story-img-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ---------- Project & Architectural Gallery ---------- */
+        .gallery-section-intro {
+            margin-bottom: 24px;
+            font-size: 16px;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--navy-2);
+            border: 1px solid var(--line);
+            cursor: pointer;
+            box-shadow: 0 8px 24px -8px rgba(13,27,40,0.1);
+            transition: all 0.35s var(--ease);
+            aspect-ratio: 16 / 11;
+        }
+        .gallery-item.span-full {
+            grid-column: 1 / -1;
+            aspect-ratio: 16 / 9;
+        }
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px -12px rgba(13,27,40,0.25);
+            border-color: rgba(243, 159, 14, 0.5);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s var(--ease);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 35%, rgba(10,21,32,0.88) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            color: #fff;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-badge {
+            display: inline-block;
+            align-self: flex-start;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            background: rgba(13, 27, 40, 0.7);
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 6px;
+            border: 1px solid rgba(243, 159, 14, 0.3);
+            backdrop-filter: blur(4px);
+        }
+        .gallery-title {
+            font-family: var(--serif);
+            font-size: 17px;
+            font-weight: 600;
+            color: #FFFFFF;
+            line-height: 1.25;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        @media (max-width: 650px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .gallery-item { aspect-ratio: 4 / 3; }
+            .gallery-item.span-full { aspect-ratio: 4 / 3; }
+        }
+
+        /* Lightbox Modal */
+        .lightbox-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            background: rgba(10, 21, 32, 0.94);
+            backdrop-filter: blur(12px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-dialog {
+            position: relative;
+            max-width: 960px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .lightbox-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 25px 60px -15px rgba(0,0,0,0.8);
+            border: 1px solid rgba(255,255,255,0.15);
+            background: #000;
+        }
+        .lightbox-image-container img {
+            max-height: 75vh;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+        .lightbox-info {
+            width: 100%;
+            margin-top: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #E8E2D4;
+            font-size: 15px;
+        }
+        .lightbox-caption {
+            font-family: var(--serif);
+            font-weight: 500;
+            font-size: 17px;
+            color: #FFFFFF;
+        }
+        .lightbox-counter {
+            font-size: 13px;
+            color: var(--gold);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+        .lightbox-close-btn {
+            position: absolute;
+            top: -46px;
+            right: 0;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lightbox-close-btn:hover {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+        .lightbox-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(13, 27, 40, 0.75);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(6px);
+        }
+        .lightbox-arrow:hover {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+        .lightbox-prev-btn { left: -64px; }
+        .lightbox-next-btn { right: -64px; }
+        @media (max-width: 1100px) {
+            .lightbox-prev-btn { left: 16px; }
+            .lightbox-next-btn { right: 16px; }
+            .lightbox-close-btn { top: 12px; right: 16px; z-index: 2; }
+        }
     </style>
 </head>
 <body>
@@ -635,10 +873,66 @@
                     </div>
                 </div>
 
-                <!-- SECTION 4: PROJECT LOCATION -->
-                <section class="story-section map-story-section">
+                <!-- SECTION 04: PROJECT & ARCHITECTURAL GALLERY -->
+                <div class="story-section">
                     <div class="story-section-header">
                         <div class="story-section-num">04</div>
+                        <h2>Project &amp; Architectural Gallery</h2>
+                    </div>
+                    <p class="gallery-section-intro">Explore the completed architectural vision and realistic spatial rendering for the Saratoga, CA ground-up luxury hillside development, highlighting the dual-lot compound, cantilevered terraces, integrated LED illumination, and tiered landscaping.</p>
+
+                    <div class="gallery-grid" id="saratoga-gallery">
+                        <!-- Item 1: Master Sunset Panorama (Featured Full-width) -->
+                        <div class="gallery-item span-full" data-index="0" data-src="assets/saratoga-3.jpg" data-caption="Master Sunset Panorama across Both Lots — Saratoga, CA">
+                            <img src="assets/saratoga-3.jpg" alt="Master Sunset Panorama across Both Lots" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge">Master Overview</span>
+                                <h4 class="gallery-title">Master Sunset Panorama across Both Lots</h4>
+                            </div>
+                        </div>
+
+                        <!-- Item 2: Dual Hillside Residences -->
+                        <div class="gallery-item" data-index="1" data-src="assets/saratoga-2.jpg" data-caption="Dual Modern Hillside Residences &amp; Tiered Terraces">
+                            <img src="assets/saratoga-2.jpg" alt="Dual Modern Hillside Residences" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge">Compound Design</span>
+                                <h4 class="gallery-title">Dual Modern Residences &amp; Terraces</h4>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Elevation & Stepped Slope -->
+                        <div class="gallery-item" data-index="2" data-src="assets/saratoga-5.jpg" data-caption="Architectural Elevation, Stepped Slope &amp; Living Grass Pavers">
+                            <img src="assets/saratoga-5.jpg" alt="Architectural Elevation & Stepped Slope" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge">Elevation &amp; Grade</span>
+                                <h4 class="gallery-title">Architectural Elevation &amp; Slope</h4>
+                            </div>
+                        </div>
+
+                        <!-- Item 4: Motor Court & Driveway -->
+                        <div class="gallery-item" data-index="3" data-src="assets/saratoga-4.jpg" data-caption="Motor Court Driveway &amp; Cantilevered Balconies">
+                            <img src="assets/saratoga-4.jpg" alt="Motor Court Driveway & Cantilevered Balconies" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge">Driveway &amp; Balconies</span>
+                                <h4 class="gallery-title">Motor Court &amp; Upper Terrace</h4>
+                            </div>
+                        </div>
+
+                        <!-- Item 5: Grand Entrance & Pergola -->
+                        <div class="gallery-item" data-index="4" data-src="assets/saratoga-1.jpg" data-caption="Main Residence Entry, Rooftop Pergola &amp; Gate Pillar">
+                            <img src="assets/saratoga-1.jpg" alt="Main Residence Entry & Rooftop Pergola" loading="lazy">
+                            <div class="gallery-overlay">
+                                <span class="gallery-badge">Entrance &amp; Pergola</span>
+                                <h4 class="gallery-title">Grand Entrance &amp; Rooftop Pavilion</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 05: PROJECT LOCATION -->
+                <section class="story-section map-story-section">
+                    <div class="story-section-header">
+                        <div class="story-section-num">05</div>
                         <h2>Project Location</h2>
                     </div>
                     <p>Prime ground-up luxury residential development located in Saratoga, positioned in a high-demand market with exceptional equity backing.</p>
@@ -729,6 +1023,22 @@
         </div>
     </footer>
 
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="galleryLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="lightbox-dialog">
+            <button class="lightbox-close-btn" id="lightboxClose" aria-label="Close image">✕</button>
+            <button class="lightbox-arrow lightbox-prev-btn" id="lightboxPrev" aria-label="Previous image">‹</button>
+            <button class="lightbox-arrow lightbox-next-btn" id="lightboxNext" aria-label="Next image">›</button>
+            <div class="lightbox-image-container">
+                <img id="lightboxImg" src="" alt="">
+            </div>
+            <div class="lightbox-info">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+                <div class="lightbox-counter" id="lightboxCounter"></div>
+            </div>
+        </div>
+    </div>
+
     <script>
         (function () {
             // Sticky header shadow
@@ -745,6 +1055,68 @@
                 toggle.addEventListener('click', () => mobileNav.classList.add('open'));
                 close.addEventListener('click', () => mobileNav.classList.remove('open'));
                 mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
+            }
+
+            // Gallery Lightbox
+            const gallery = document.getElementById('saratoga-gallery');
+            const lightbox = document.getElementById('galleryLightbox');
+            if (gallery && lightbox) {
+                const items = Array.from(gallery.querySelectorAll('.gallery-item'));
+                const imgEl = document.getElementById('lightboxImg');
+                const captionEl = document.getElementById('lightboxCaption');
+                const counterEl = document.getElementById('lightboxCounter');
+                const closeBtn = document.getElementById('lightboxClose');
+                const prevBtn = document.getElementById('lightboxPrev');
+                const nextBtn = document.getElementById('lightboxNext');
+
+                let currentIndex = 0;
+
+                function showImage(index) {
+                    if (index < 0) index = items.length - 1;
+                    if (index >= items.length) index = 0;
+                    currentIndex = index;
+
+                    const item = items[currentIndex];
+                    const src = item.getAttribute('data-src');
+                    const caption = item.getAttribute('data-caption');
+
+                    imgEl.src = src;
+                    imgEl.alt = caption;
+                    captionEl.textContent = caption;
+                    counterEl.textContent = `${currentIndex + 1} / ${items.length}`;
+                }
+
+                function openLightbox(index) {
+                    showImage(index);
+                    lightbox.classList.add('active');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function closeLightbox() {
+                    lightbox.classList.remove('active');
+                    lightbox.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                }
+
+                items.forEach((item, idx) => {
+                    item.addEventListener('click', () => openLightbox(idx));
+                });
+
+                closeBtn.addEventListener('click', closeLightbox);
+                prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex - 1); });
+                nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showImage(currentIndex + 1); });
+
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) closeLightbox();
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (!lightbox.classList.contains('active')) return;
+                    if (e.key === 'Escape') closeLightbox();
+                    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+                    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+                });
             }
         })();
     </script>
