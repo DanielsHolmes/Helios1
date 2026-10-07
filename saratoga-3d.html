@@ -550,29 +550,58 @@
         </div>
     </div>
 
-    <!-- Local / Fallback Vendor Scripts -->
+    <!-- Three.js & OrbitControls with Local & CDN Fallbacks -->
     <script src="assets/vendor/three.min.js"></script>
+    <script>
+        if (typeof THREE === 'undefined') {
+            document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"><\/script>');
+        }
+    </script>
     <script src="assets/vendor/OrbitControls.js"></script>
+    <script>
+        if (typeof THREE !== 'undefined' && typeof THREE.OrbitControls === 'undefined') {
+            document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"><\/script>');
+        }
+    </script>
 
     <script>
         (function () {
+            const loader = document.getElementById('loader');
+
+            function showError(msg) {
+                if (loader) {
+                    loader.innerHTML = `
+                        <div style="background: rgba(220, 53, 69, 0.2); border: 1px solid #dc3545; padding: 24px; border-radius: 12px; max-width: 520px; text-align: center;">
+                            <h3 style="color: #ff6b6b; margin-bottom: 10px; font-family: 'Poppins', sans-serif;">Error Loading 3D Scene</h3>
+                            <p style="color: #E6EDF2; font-size: 13px; line-height: 1.6; margin-bottom: 16px;">${msg}</p>
+                            <button onclick="location.reload()" style="background: var(--gold); color: #0D1B28; border: none; font-weight: 700; padding: 8px 18px; border-radius: 100px; cursor: pointer;">Reload Scene</button>
+                        </div>
+                    `;
+                }
+            }
+
             // Check Three.js availability
             if (typeof THREE === 'undefined') {
-                document.getElementById('loader').innerHTML = '<div style="color: #ff6b6b; padding: 20px; text-align: center;">Unable to initialize WebGL engine. Please check your browser WebGL support.</div>';
+                showError('Three.js library could not be loaded. Please check your internet connection or local files.');
+                return;
+            }
+            if (typeof THREE.OrbitControls === 'undefined') {
+                showError('OrbitControls library could not be loaded.');
                 return;
             }
 
-            const canvas = document.getElementById('webgl-canvas');
-            const scene = new THREE.Scene();
-            scene.fog = new THREE.Exp2Fog(0x182436, 0.0032);
+            try {
+                const canvas = document.getElementById('webgl-canvas');
+                const scene = new THREE.Scene();
+                scene.fog = new THREE.FogExp2(0x182436, 0.0032);
 
-            // Camera setup
-            const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.5, 600);
-            const renderer = new THREE.WebGLRenderer({
-                canvas: canvas,
-                antialias: true,
-                powerPreference: 'high-performance'
-            });
+                // Camera setup
+                const camera = new THREE.PerspectiveCamera(42, window.innerWidth / window.innerHeight, 0.5, 600);
+                const renderer = new THREE.WebGLRenderer({
+                    canvas: canvas,
+                    antialias: true,
+                    powerPreference: 'high-performance'
+                });
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
             renderer.shadowMap.enabled = true;
@@ -1398,6 +1427,11 @@
                 renderer.render(scene, camera);
             }
             animate();
+
+            } catch (err) {
+                console.error('3D initialization error:', err);
+                showError(err.message || 'Error initializing 3D scene');
+            }
 
         })();
     </script>
