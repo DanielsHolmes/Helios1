@@ -134,24 +134,42 @@
 
         /* ---------- Breadcrumbs ---------- */
         .breadcrumb-wrap {
-            padding: 100px 0 0;
-            background: var(--navy-2);
+            margin-top: 74px;
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--line);
+            padding: 14px 0;
+            position: relative;
+            z-index: 20;
         }
         .breadcrumb {
             display: flex;
             align-items: center;
             gap: 10px;
             font-size: 13px;
-            color: #7F93A3;
+            font-weight: 500;
+            color: var(--muted);
         }
-        .breadcrumb a { color: #9FB0BC; transition: color 0.25s; }
-        .breadcrumb a:hover { color: var(--gold); }
-        .breadcrumb .sep { color: var(--gold-2); font-size: 10px; }
+        .breadcrumb a {
+            color: var(--muted);
+            transition: color 0.25s ease;
+        }
+        .breadcrumb a:hover {
+            color: var(--navy);
+        }
+        .breadcrumb .sep {
+            color: var(--gold-2);
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .breadcrumb .current {
+            color: var(--navy);
+            font-weight: 700;
+        }
 
         /* ---------- Hero ---------- */
         .hero {
             position: relative;
-            padding: 40px 0 90px;
+            padding: 70px 0 90px;
             color: #fff;
             background: var(--navy-2);
             overflow: hidden;
@@ -435,21 +453,85 @@
             .container { padding: 0 20px; }
         }
 
-        /* Map Section */
+        /* Map & Build Plan Section */
+        .location-plan-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+        .loc-plan-col {
+            display: flex;
+            flex-direction: column;
+        }
+        .loc-plan-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 0.02em;
+        }
         .map-wrapper {
             position: relative;
             width: 100%;
+            height: 420px;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--line);
             box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-            margin-top: 20px;
+            margin-top: 10px;
         }
         .map-wrapper iframe {
             width: 100%;
-            height: 450px;
+            height: 100%;
             display: block;
             border: 0;
+        }
+        .build-plan-box {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            background: #FAFAFA;
+            margin-top: 10px;
+        }
+        .build-plan-preview {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-decoration: none;
+        }
+        .build-plan-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #fff;
+            padding: 10px;
+            transition: transform 0.35s var(--ease);
+        }
+        .build-plan-preview:hover img {
+            transform: scale(1.02);
+        }
+        .build-plan-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 27, 40, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            backdrop-filter: blur(2px);
+        }
+        .build-plan-preview:hover .build-plan-overlay {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .location-plan-grid { grid-template-columns: 1fr; }
+            .map-wrapper, .build-plan-box { height: 340px; }
         }
 
         /* Story Image Showcase */
@@ -737,7 +819,7 @@
                 <span class="sep">/</span>
                 <a href="case-studies.html">Case Studies</a>
                 <span class="sep">/</span>
-                <span>Saratoga, CA</span>
+                <span class="current">Saratoga, CA</span>
             </div>
         </div>
     </div>
@@ -754,7 +836,7 @@
                     <span>SARATOGA, CA</span>
                 </div>
                 <h1 class="display" style="color: #FFFFFF !important;">Financing a First-Time Ground-Up Borrower</h1>
-                <p class="hero-sub">The borrower had strong liquidity, significant real estate experience, permitted land, and a clear construction plan.</p>
+                <p class="hero-sub">The borrower had strong liquidity, Limited Real estate experience, permitted land, and a clear construction plan.</p>
                 <p class="hero-copy">The challenge was a gap in completed ground-up experience on title. Helios1 Capital looked beyond that single point and evaluated the full opportunity.</p>
             </div>
         </div>
@@ -813,15 +895,15 @@
                     <p>Helios1 Capital looked at those details together and focused on how the borrower actually operated.</p>
 
                     <div class="breakdown-box">
-                        <h4>Key Risk Mitigants Identified by Helios1:</h4>
+                        <h4>Key Risk Factors by Helios1:</h4>
                         <div class="breakdown-list">
                             <div class="breakdown-item">
                                 <span class="dot">✦</span>
-                                <div>Loan size ($4M+, single borrower) narrows the field of private lenders willing to fund a first-time ground-up deal.</div>
+                                <div>Loan size ($4M+, single borrower) narrows the field of lenders willing to fund a first-time ground-up deal.</div>
                             </div>
                             <div class="breakdown-item">
                                 <span class="dot">✦</span>
-                                <div>Never use private money and no demonstrated ground-up construction experience — his Oregon record was rental only.</div>
+                                <div>Large luxury Ground up Build with no demonstrated ground up construction experience- his Oregon track record was rental Only.</div>
                             </div>
                             <div class="breakdown-item">
                                 <span class="dot">✦</span>
@@ -843,7 +925,7 @@
                         <div class="story-section-num">03</div>
                         <h2>The Outcome &amp; Expanding Partnership</h2>
                     </div>
-                    <p>Helios1 Capital secured the financing and structured the initial construction facility with a <strong>24-month term</strong>, accommodating realistic build schedules and inspections.</p>
+                    <p>Helios1 Capital tailored a loan and structured the initial construction facility with a <strong>24-month term</strong>, accommodating realistic build schedules and inspections.</p>
                     
                     <div class="outcome-box">
                         <div class="outcome-title">What Helios1 Did</div>
@@ -929,15 +1011,35 @@
                     </div>
                 </div>
 
-                <!-- SECTION 05: PROJECT LOCATION -->
+                <!-- SECTION 05: PROJECT LOCATION & BUILD PLANS -->
                 <section class="story-section map-story-section">
                     <div class="story-section-header">
                         <div class="story-section-num">05</div>
-                        <h2>Project Location</h2>
+                        <h2>Project Location &amp; Build Plans</h2>
                     </div>
-                    <p>Prime ground-up luxury residential development located in Saratoga, positioned in a high-demand market with exceptional equity backing.</p>
-                    <div class="map-wrapper">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41467.303942236955!2d-122.06257671090358!3d37.26800817846943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e4ac44c7e3fa9%3A0x8308c887d40b56cc!2sSaratoga%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2sco!4v1790810355564!5m2!1ses!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <p>Prime ground-up luxury residential development located in Saratoga, CA, positioned in a high-demand market with approved architectural elevation and structural plans.</p>
+                    <div class="location-plan-grid">
+                        <div class="loc-plan-col">
+                            <div class="loc-plan-label">
+                                <strong>Site Location: Saratoga, CA</strong>
+                            </div>
+                            <div class="map-wrapper">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41467.303942236955!2d-122.06257671090358!3d37.26800817846943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e4ac44c7e3fa9%3A0x8308c887d40b56cc!2sSaratoga%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2sco!4v1790810355564!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            </div>
+                        </div>
+                        <div class="loc-plan-col">
+                            <div class="loc-plan-label">
+                                <strong>Approved Build Plans (Elevations A5.0)</strong>
+                            </div>
+                            <div class="build-plan-box">
+                                <a href="assets/saratoga-build-plan.pdf" target="_blank" class="build-plan-preview" title="Open Full Build Plans PDF">
+                                    <img src="assets/saratoga-build-plan.png" alt="Saratoga Proposed Elevations A5.0 Build Plans" loading="lazy">
+                                    <div class="build-plan-overlay">
+                                        <span class="btn btn-gold" style="padding: 10px 20px; font-size: 13px;">View Blueprint PDF ↗</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
