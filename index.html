@@ -159,7 +159,7 @@
         }
         .hero-overlay {
             position: absolute; inset: 0;
-            background: linear-gradient(180deg, rgba(10,21,32,0.45) 0%, rgba(10,21,32,0.2) 45%, rgba(10,21,32,0.72) 100%);
+            background: linear-gradient(180deg, rgba(10,21,32,0.80) 0%, rgba(10,21,32,0.64) 42%, rgba(10,21,32,0.78) 100%);
         }
         .hero-main {
             position: relative; z-index: 2;
@@ -186,6 +186,7 @@
             color: #fff;
             text-align: center;
             margin: 0;
+            text-shadow: 0 2px 24px rgba(0,0,0,0.5);
         }
         .hero-sub {
             font-family: var(--sans);
@@ -193,10 +194,11 @@
             font-weight: 400;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.85);
+            color: rgba(255,255,255,0.95);
             margin-bottom: 0;
             max-width: 520px;
             text-align: center;
+            text-shadow: 0 1px 12px rgba(0,0,0,0.5);
         }
         .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
         .hero-btn {
@@ -205,12 +207,15 @@
             padding: 14px 28px; border-radius: 100px;
             border: 1px solid #fff;
             color: #fff;
-            background: transparent;
+            background: rgba(10, 21, 32, 0.35);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
             transition: all 0.35s var(--ease);
         }
-        .hero-btn.hero-btn-solid { background: #fff; color: var(--navy); }
+        .hero-btn.hero-btn-solid { background: #fff; color: var(--navy); border-color: #fff; }
         .hero-btn:hover { transform: translateY(-2px); }
-        .hero-btn.hero-btn-ghost:hover { background: rgba(255,255,255,0.16); }
+        .hero-btn.hero-btn-ghost:hover { background: rgba(255,255,255,0.2); }
         .hero-btn.hero-btn-solid:hover { background: #f2f2f2; }
 
         /* ---------- We Get the Deal ---------- */
