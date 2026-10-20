@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Helios1 Capital Blog & Insights. Real estate financing perspectives, deal breakdowns, and underwriting intelligence for active investors and builders.">
+    <title>Blog &amp; Insights | Real Estate Finance Intelligence | Helios1 Capital</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        :root {
+            --navy: #0D1B28;
+            --navy-2: #0A1520;
+            --ink: #10202E;
+            --gold: #F39F0E;
+            --gold-2: #E08E06;
+            --cream: #FBF8F2;
+            --cream-2: #F4EFE6;
+            --white: #FFFFFF;
+            --muted: #5C6B77;
+            --line: rgba(13, 27, 40, 0.12);
+            --line-light: rgba(255, 255, 255, 0.14);
+            --serif: "Poppins", -apple-system, sans-serif;
+            --sans: "Manrope", -apple-system, sans-serif;
+            --container: 1240px;
+            --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--sans);
+            color: var(--ink);
+            background: var(--cream);
+            font-size: 16px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+        .display {
+            font-family: var(--serif);
+            font-weight: 500;
+            font-size: clamp(30px, 3.8vw, 48px);
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            color: var(--navy);
+        }
+        .section-dark .display { color: #F3EFE6; }
+
+        /* ---------- Buttons ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02em;
+            padding: 14px 28px;
+            border-radius: 100px;
+            transition: all 0.35s var(--ease);
+            cursor: pointer;
+            border: 1px solid transparent;
+            line-height: 1;
+        }
+        .btn .arr { transition: transform 0.35s var(--ease); }
+        .btn:hover .arr { transform: translateX(4px); }
+        .btn-gold { background: var(--gold); color: var(--navy); }
+        .btn-gold:hover { background: var(--gold-2); transform: translateY(-2px); box-shadow: 0 16px 34px -14px rgba(243, 159, 14, 0.7); }
+        .btn-outline { border-color: var(--navy); color: var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: var(--cream); }
+        .btn-outline-light { border-color: rgba(255,255,255,0.4); color: #fff; }
+        .btn-outline-light:hover { background: #fff; color: var(--navy); }
+
+        .text-link {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-weight: 700; font-size: 14px; letter-spacing: 0.02em;
+            color: var(--navy); position: relative; padding-bottom: 4px;
+        }
+        .text-link::after {
+            content: ""; position: absolute; left: 0; bottom: 0;
+            width: 100%; height: 1px; background: var(--gold);
+            transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .text-link:hover::after { transform: scaleX(1); transform-origin: left; }
+        .text-link .arr { color: var(--gold-2); transition: transform 0.35s var(--ease); }
+        .text-link:hover .arr { transform: translateX(4px); }
+
+        /* ---------- Header ---------- */
+        .site-header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(251, 248, 242, 0.92);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+            transition: box-shadow 0.3s ease;
+        }
+        .site-header.scrolled { box-shadow: 0 10px 40px -20px rgba(13,27,40,0.35); }
+        .nav-wrap { display: flex; align-items: center; justify-content: space-between; height: 74px; gap: 24px; }
+        .brand img { height: 32px; width: auto; }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a { font-size: 13px; font-weight: 600; color: var(--ink); position: relative; padding: 6px 0; white-space: nowrap; }
+        .nav a::after {
+            content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+            background: var(--gold); transform: scaleX(0); transform-origin: right;
+            transition: transform 0.35s var(--ease);
+        }
+        .nav a:hover::after, .nav a.active::after { transform: scaleX(1); transform-origin: left; }
+        .nav a.active { color: var(--navy); font-weight: 700; }
+        .nav a.active::after { transform: scaleX(1); }
+        .nav-cta { display: flex; align-items: center; gap: 18px; }
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--navy); margin: 4px 0; }
+
+        .mobile-nav {
+            position: fixed; inset: 0; background: var(--navy); color: #fff; z-index: 999;
+            display: flex; flex-direction: column; justify-content: center; padding: 80px 32px;
+            transform: translateX(100%); transition: transform 0.5s var(--ease);
+        }
+        .mobile-nav.open { transform: translateX(0); }
+        .mobile-nav a { font-family: var(--serif); font-size: 24px; color: #fff; padding: 12px 0; }
+        .mobile-nav .close { position: absolute; top: 28px; right: 32px; background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; }
+
+        /* ---------- Elementor Principal / Featured Post ---------- */
+        .featured-section {
+            padding: 115px 0 60px;
+        }
+        .featured-card {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr;
+            gap: 40px;
+            background: var(--white);
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            box-shadow: 0 16px 40px -15px rgba(13, 27, 40, 0.07);
+            transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+            position: relative;
+        }
+        .featured-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 24px 50px -15px rgba(13, 27, 40, 0.12);
+        }
+        .featured-media {
+            position: relative;
+            overflow: hidden;
+            min-height: 420px;
+            background: var(--navy-2);
+        }
+        .featured-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s var(--ease);
+        }
+        .featured-card:hover .featured-media img {
+            transform: scale(1.04);
+        }
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            z-index: 2;
+        }
+        .featured-content {
+            padding: 44px 44px 44px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .featured-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .tag-pill {
+            background: var(--cream-2);
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 100px;
+        }
+        .meta-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--muted);
+            opacity: 0.5;
+        }
+        .featured-title {
+            font-family: var(--serif);
+            font-size: clamp(24px, 2.3vw, 32px);
+            line-height: 1.25;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 16px;
+            transition: color 0.3s ease;
+        }
+        .featured-card:hover .featured-title {
+            color: var(--gold-2);
+        }
+        .featured-excerpt {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+        .featured-author-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .author-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .author-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .author-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.3;
+        }
+        .author-role {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        /* ---------- Category Pills & Search Controls ---------- */
+        .blog-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--line);
+        }
+        .category-pills {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .cat-pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 18px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--navy);
+            background: #fff;
+            border: 1px solid var(--line);
+            cursor: pointer;
+            transition: all 0.25s var(--ease);
+            white-space: nowrap;
+        }
+        .cat-pill:hover {
+            border-color: var(--navy);
+            transform: translateY(-1px);
+        }
+        .cat-pill.active {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+            box-shadow: 0 4px 14px rgba(13, 27, 40, 0.18);
+        }
+        .blog-search-wrap {
+            position: relative;
+            min-width: 270px;
+        }
+        .blog-search-wrap .material-symbols-outlined {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: 20px;
+            pointer-events: none;
+        }
+        .blog-search-input {
+            width: 100%;
+            padding: 10px 16px 10px 42px;
+            border-radius: 100px;
+            border: 1px solid var(--line);
+            background: #fff;
+            font-family: var(--sans);
+            font-size: 13px;
+            color: var(--navy);
+            outline: none;
+            transition: all 0.25s ease;
+        }
+        .blog-search-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(243, 159, 14, 0.15);
+        }
+
+        /* ---------- Elementor 3-Column Grid Section ---------- */
+        .blog-grid-section {
+            padding: 20px 0 90px;
+        }
+        .grid-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            margin-bottom: 34px;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 16px;
+        }
+        .grid-header h2 {
+            font-family: var(--serif);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .grid-count {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        /* Rows of three cards */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+        .blog-card {
+            background: var(--white);
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.35s var(--ease);
+            position: relative;
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -14px rgba(13, 27, 40, 0.12);
+            border-color: rgba(243, 159, 14, 0.4);
+        }
+        .card-media {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            background: var(--navy-2);
+        }
+        .card-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--ease);
+        }
+        .blog-card:hover .card-media img {
+            transform: scale(1.05);
+        }
+        .card-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(13, 27, 40, 0.88);
+            color: #fff;
+            backdrop-filter: blur(8px);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 5px 11px;
+            border-radius: 100px;
+        }
+        .card-body {
+            padding: 24px 24px 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .card-title {
+            font-family: var(--serif);
+            font-size: 18px;
+            line-height: 1.35;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+            transition: color 0.25s ease;
+        }
+        .blog-card:hover .card-title {
+            color: var(--gold-2);
+        }
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.6;
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid var(--line);
+        }
+        .card-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+        .card-author-img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .card-link {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--navy);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.25s ease, color 0.25s ease;
+        }
+        .card-link .arr { color: var(--gold-2); transition: transform 0.25s ease; }
+        .blog-card:hover .card-link .arr {
+            transform: translateX(4px);
+        }
+
+        /* ---------- In-Feed Newsletter Banner (Elementor Blog feature) ---------- */
+        .blog-newsletter-banner {
+            grid-column: 1 / -1;
+            background: var(--navy);
+            color: #fff;
+            border-radius: 16px;
+            padding: 50px 48px;
+            margin: 16px 0;
+            position: relative;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 20px 45px -15px rgba(10, 21, 32, 0.4);
+        }
+        .blog-newsletter-banner::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(243, 159, 14, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .nl-text .nl-tag {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .nl-text h3 {
+            font-family: var(--serif);
+            font-size: 26px;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.25;
+        }
+        .nl-text p {
+            color: #A1B2C1;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .nl-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nl-input-row {
+            display: flex;
+            gap: 10px;
+        }
+        .nl-input {
+            flex-grow: 1;
+            padding: 14px 20px;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.25s ease;
+        }
+        .nl-input::placeholder { color: #8A9CAE; }
+        .nl-input:focus {
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.12);
+        }
+        .nl-fineprint {
+            font-size: 11px;
+            color: #728495;
+            padding-left: 6px;
+        }
+
+        /* ---------- Elementor Pagination ---------- */
+        .blog-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 60px;
+        }
+        .page-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 42px;
+            height: 42px;
+            padding: 0 14px;
+            border-radius: 100px;
+            background: #fff;
+            border: 1px solid var(--line);
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+            cursor: pointer;
+            transition: all 0.25s var(--ease);
+        }
+        .page-num:hover:not(.disabled) {
+            border-color: var(--navy);
+            transform: translateY(-1px);
+        }
+        .page-num.active {
+            background: var(--navy);
+            color: #fff;
+            border-color: var(--navy);
+        }
+        .page-num.disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        /* Empty state */
+        .empty-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            display: none;
+        }
+        .empty-results h4 {
+            font-family: var(--serif);
+            font-size: 20px;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .empty-results p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* ---------- Final CTA ---------- */
+        .section { padding: 80px 0; }
+        .cta-final {
+            position: relative; border-radius: 16px; overflow: hidden;
+            padding: clamp(60px, 8vw, 90px); text-align: center; color: #fff;
+            box-shadow: 0 40px 80px -30px rgba(13,27,40,0.5);
+        }
+        .cta-final .bg { position: absolute; inset: 0; z-index: -2; }
+        .cta-final .bg img { width: 100%; height: 100%; object-fit: cover; }
+        .cta-final .bg::after {
+            content: ""; position: absolute; inset: 0;
+            background: rgba(10, 21, 32, 0.88);
+        }
+        .cta-final h2 { color: #fff; margin-bottom: 16px; }
+        .cta-final p { font-size: 18px; color: #E7D9C0; margin-bottom: 34px; max-width: 620px; margin-left: auto; margin-right: auto; }
+        .cta-final .actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ---------- Footer ---------- */
+        .site-footer { background: var(--navy-2); color: #9FB0BC; padding: 90px 0 40px; }
+        .footer-top {
+            display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1.3fr; gap: 44px;
+            padding-bottom: 60px; border-bottom: 1px solid var(--line-light);
+        }
+        .footer-brand .footer-logo img { height: 32px; width: auto; margin-bottom: 18px; }
+        .footer-brand p { font-size: 14px; line-height: 1.6; color: #7F93A3; }
+        .footer-col h4 { font-family: var(--serif); font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 18px; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col a { font-size: 13px; color: #9FB0BC; transition: color 0.3s ease; }
+        .footer-col a:hover { color: var(--gold); }
+        .footer-col .contact-line { font-size: 13px; margin-bottom: 10px; line-height: 1.5; }
+        .footer-col .contact-line a { color: var(--gold); }
+        .footer-bottom {
+            display: flex; justify-content: space-between; align-items: center;
+            padding-top: 30px; font-size: 13px; color: #5C6E7E; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-bottom .legal { display: flex; gap: 20px; }
+        .footer-bottom .legal a:hover { color: #9FB0BC; }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 1024px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+            .blog-newsletter-banner { grid-template-columns: 1fr; gap: 24px; padding: 36px 30px; }
+        }
+        @media (max-width: 991px) {
+            .nav { display: none; }
+            .nav-toggle { display: block; }
+            .featured-card { grid-template-columns: 1fr; }
+            .featured-media { min-height: 280px; }
+            .featured-content { padding: 30px 28px; }
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 640px) {
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-controls { flex-direction: column; align-items: stretch; }
+            .blog-search-wrap { width: 100%; }
+            .category-pills { overflow-x: auto; padding-bottom: 6px; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+            .footer-top { grid-template-columns: 1fr; }
+            .container { padding: 0 20px; }
+            .featured-section { padding: 95px 0 40px; }
+            .nl-input-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+        <div class="container nav-wrap">
+            <a href="index.html" class="brand">
+                <img src="assets/logo-horizontal.png" alt="Helios1 Capital">
+            </a>
+            <nav class="nav">
+                <a href="index.html#loans">Loan Programs</a>
+                <a href="index.html#how">How It Works</a>
+                <a href="about.html">About</a>
+                <a href="case-studies.html">Case Studies</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="faqs.html">FAQs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="close" id="mobile-close" aria-label="Close menu"><span class="material-symbols-outlined" style="font-size: 28px;">close</span></button>
+        <a href="index.html">Home</a>
+        <a href="index.html#loans">Loan Programs</a>
+        <a href="index.html#how">How It Works</a>
+        <a href="about.html">About</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="blog.html" style="color: var(--gold);">Blog</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" style="color: var(--gold); margin-top: 14px;">Submit a Deal →</a>
+    </div>
+
+    <!-- ============ FEATURED / PRINCIPAL BLOG (ELEMENTOR STYLE) ============ -->
+    <section class="featured-section">
+        <div class="container">
+            <article class="featured-card" data-category="construction">
+                <div class="featured-media">
+                    <span class="featured-badge">Featured Story</span>
+                    <img src="assets/insight-ground-up-finance.jpg" alt="Ground-Up Construction Facility Underwriting">
+                </div>
+                <div class="featured-content">
+                    <div class="featured-meta">
+                        <span class="tag-pill">Ground-Up Construction</span>
+                        <span class="meta-dot"></span>
+                        <span>Oct 18, 2026</span>
+                        <span class="meta-dot"></span>
+                        <span>7 min read</span>
+                    </div>
+                    <h2 class="featured-title"><a href="blog-post.html">Structuring Ground-Up Debt in a Shifting Rate Environment: A Lender's Playbook</a></h2>
+                    <p class="featured-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. How experienced builders are structuring interest reserve buffers, phased draw milestones, and contractor contingency clauses to protect margin and prevent completion halts before shovels hit dirt.</p>
+                    <div class="featured-author-row">
+                        <div class="author-info">
+                            <img src="assets/rishi-sangal.jpg" alt="Rishi Sangal" class="author-avatar">
+                            <div class="author-text">
+                                <span class="author-name">Rishi Sangal</span>
+                                <span class="author-role">Managing Principal, Helios1</span>
+                            </div>
+                        </div>
+                        <a href="blog-post.html" class="btn btn-gold">Read Full Article <span class="arr">→</span></a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ============ 3-COLUMN BLOG GRID (ELEMENTOR ROWS OF 3) ============ -->
+    <section class="blog-grid-section">
+        <div class="container">
+            <!-- Categories and Search Bar -->
+            <div class="blog-controls">
+                <div class="category-pills" id="categoryPills">
+                    <button class="cat-pill active" data-category="all">All Articles</button>
+                    <button class="cat-pill" data-category="construction">Ground-Up Construction</button>
+                    <button class="cat-pill" data-category="dscr">DSCR &amp; Rentals</button>
+                    <button class="cat-pill" data-category="flip">Fix &amp; Flip</button>
+                    <button class="cat-pill" data-category="bridge">Bridge &amp; Commercial</button>
+                    <button class="cat-pill" data-category="capital">Capital Markets</button>
+                </div>
+                <div class="blog-search-wrap">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" class="blog-search-input" id="blogSearch" placeholder="Search insights, deal types...">
+                </div>
+            </div>
+
+            <div class="grid-header">
+                <h2>Latest Perspectives &amp; Deal Breakdowns</h2>
+                <span class="grid-count" id="articleCount">Showing 9 articles</span>
+            </div>
+
+            <div class="blog-grid" id="blogGrid">
+                
+                <!-- ROW 1 / CARD 1 -->
+                <article class="blog-card" data-category="dscr">
+                    <div class="card-media">
+                        <span class="card-tag">DSCR Rentals</span>
+                        <img src="assets/insight-dscr-comparison.jpg" alt="DSCR Debt Yield Analysis">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Oct 16, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="card-title">The 1.20x DSCR Reality: What Underwriters Look For When Rents Normalize</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo in long-term single and multifamily rental portfolios.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/thomas-carey.jpg" alt="Thomas Carey" class="card-author-img">
+                                <span>Thomas Carey</span>
+                            </div>
+                            <a href="blog-post.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 1 / CARD 2 -->
+                <article class="blog-card" data-category="construction">
+                    <div class="card-media">
+                        <span class="card-tag">Construction</span>
+                        <img src="assets/insight-construction-draws.jpg" alt="Construction Draw Schedule Management">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Oct 12, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="card-title">Managing Draw Inspections: Avoiding 14-Day Trapped Capital Delays</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et across luxury residential developments.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/rishi-sangal.jpg" alt="Rishi Sangal" class="card-author-img">
+                                <span>Rishi Sangal</span>
+                            </div>
+                            <a href="blog-post.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 1 / CARD 3 -->
+                <article class="blog-card" data-category="bridge">
+                    <div class="card-media">
+                        <span class="card-tag">Bridge &amp; Commercial</span>
+                        <img src="assets/commercial-bridge-repositioning.jpg" alt="Commercial Bridge Repositioning">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Oct 09, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="card-title">Bridge-to-Perm Execution: Underwriting The Exit Before Demolition Starts</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor for commercial value-add assets.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/thomas-carey.jpg" alt="Thomas Carey" class="card-author-img">
+                                <span>Thomas Carey</span>
+                            </div>
+                            <a href="contact.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ELEMENTOR-STYLE MID-GRID NEWSLETTER BANNER -->
+                <div class="blog-newsletter-banner">
+                    <div class="nl-text">
+                        <span class="nl-tag">Helios1 Private Dispatch</span>
+                        <h3>Deal-Level Intelligence Directly to Your Inbox</h3>
+                        <p>Join 4,500+ sponsors, developers, and mortgage brokers receiving our bi-weekly private lending analysis, rate trackers, and underwriting guidelines.</p>
+                    </div>
+                    <form class="nl-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to the Helios1 Capital Dispatch.');">
+                        <div class="nl-input-row">
+                            <input type="email" required class="nl-input" placeholder="Enter your business email...">
+                            <button type="submit" class="btn btn-gold">Subscribe</button>
+                        </div>
+                        <span class="nl-fineprint">No spam. Only institutional real estate finance data. Unsubscribe anytime.</span>
+                    </form>
+                </div>
+
+                <!-- ROW 2 / CARD 4 -->
+                <article class="blog-card" data-category="flip">
+                    <div class="card-media">
+                        <span class="card-tag">Fix &amp; Flip</span>
+                        <img src="assets/fix-flip-proof.jpg" alt="Fix and Flip Renovation Underwriting">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Oct 05, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="card-title">Fix &amp; Flip Margin Compression: 5 Underwriting Lessons from 100+ Deals</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros in fast-turnaround residential flips.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/rishi-sangal.jpg" alt="Rishi Sangal" class="card-author-img">
+                                <span>Rishi Sangal</span>
+                            </div>
+                            <a href="contact.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 2 / CARD 5 -->
+                <article class="blog-card" data-category="capital">
+                    <div class="card-media">
+                        <span class="card-tag">Case Breakdown</span>
+                        <img src="assets/saratoga-1.jpg" alt="Saratoga Luxury Ground-Up Case">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Sep 29, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3 class="card-title">Inside the Saratoga Project: Structuring a $4.2M Facility in 18 Days</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia bibendum nulla sed consectetur. How architectural complexity was underwritten in Silicon Valley.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/thomas-carey.jpg" alt="Thomas Carey" class="card-author-img">
+                                <span>Thomas Carey</span>
+                            </div>
+                            <a href="case-study-saratoga.html" class="card-link">View Case <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 2 / CARD 6 -->
+                <article class="blog-card" data-category="capital">
+                    <div class="card-media">
+                        <span class="card-tag">Capital Markets</span>
+                        <img src="assets/capital-markets-lending.jpg" alt="Capital Markets and Private Debt">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Sep 22, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="card-title">Why Regional Bank Retrenchment is Powering Private Credit Partnerships</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/rishi-sangal.jpg" alt="Rishi Sangal" class="card-author-img">
+                                <span>Rishi Sangal</span>
+                            </div>
+                            <a href="contact.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 3 / CARD 7 -->
+                <article class="blog-card" data-category="construction">
+                    <div class="card-media">
+                        <span class="card-tag">Construction</span>
+                        <img src="assets/townhouses.jpg" alt="Horizontal and Vertical Construction">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Sep 16, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3 class="card-title">Horizontal Infrastructure vs Vertical Framing: Phased Loan Structuring</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla across multi-unit townhome subdivisions.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/thomas-carey.jpg" alt="Thomas Carey" class="card-author-img">
+                                <span>Thomas Carey</span>
+                            </div>
+                            <a href="contact.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 3 / CARD 8 -->
+                <article class="blog-card" data-category="dscr">
+                    <div class="card-media">
+                        <span class="card-tag">DSCR Rentals</span>
+                        <img src="assets/dscr-hero.jpg" alt="Short-term rental and portfolio debt">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Sep 09, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="card-title">Financing Build-to-Rent: Bridging the Gap from C.O. to Permanent Debt</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit for single-family rental portfolio aggregators.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/rishi-sangal.jpg" alt="Rishi Sangal" class="card-author-img">
+                                <span>Rishi Sangal</span>
+                            </div>
+                            <a href="contact.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ROW 3 / CARD 9 -->
+                <article class="blog-card" data-category="bridge">
+                    <div class="card-media">
+                        <span class="card-tag">Multifamily &amp; Bridge</span>
+                        <img src="assets/multifamily-hero.jpg" alt="Multifamily repositioning debt">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span>Sep 02, 2026</span>
+                            <span class="meta-dot"></span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3 class="card-title">Multifamily Repositioning: Calculating Realistic Yield-on-Cost Under Pressure</h3>
+                        <p class="card-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam in mid-market apartment assets.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="assets/thomas-carey.jpg" alt="Thomas Carey" class="card-author-img">
+                                <span>Thomas Carey</span>
+                            </div>
+                            <a href="contact.html" class="card-link">Read More <span class="arr">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- EMPTY STATE (if no search results) -->
+                <div class="empty-results" id="emptyResults">
+                    <h4>No articles found</h4>
+                    <p>Try searching for a different topic, term, or clear your category filter.</p>
+                </div>
+
+            </div>
+
+            <!-- Elementor-Style Pagination -->
+            <div class="blog-pagination">
+                <span class="page-num disabled">‹ Prev</span>
+                <span class="page-num active">1</span>
+                <span class="page-num">2</span>
+                <span class="page-num">3</span>
+                <span class="page-num">Next ›</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section" style="padding-top: 20px;">
+        <div class="container">
+            <div class="cta-final">
+                <div class="bg"><img src="assets/cta.webp" alt="Submit a deal to Helios1"></div>
+                <h2 class="display">Have a Deal Worth Discussing?</h2>
+                <p>Tell us about the property, the plan, and what you are looking to accomplish. We underwrite the full opportunity.</p>
+                <div class="actions">
+                    <a href="contact.html" class="btn btn-gold">Submit a Deal <span class="arr">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light">Speak With Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo-white.png" alt="Helios1 Capital">
+                    </a>
+                    <p>Private real estate lending for investors, builders, and developers. Ground-Up Construction, DSCR Rentals, Fix &amp; Flip, Bridge &amp; Multifamily.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Loan Programs</h4>
+                    <ul>
+                        <li><a href="Landings/ground-up-construction.html">Ground-Up Construction</a></li>
+                        <li><a href="Landings/fix-and-flip.html">Fix &amp; Flip</a></li>
+                        <li><a href="Landings/dscr-rental-properties.html">DSCR Rental Properties</a></li>
+                        <li><a href="Landings/bridge-financing.html">Bridge Financing</a></li>
+                        <li><a href="Landings/multifamily.html">Multifamily</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="case-study-saratoga.html">Saratoga Case Study</a></li>
+                        <li><a href="blog.html" style="color: var(--gold); font-weight: 600;">Blog &amp; Insights</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="index.html#how">How It Works</a></li>
+                        <li><a href="faqs.html">Borrower FAQ</a></li>
+                        <li><a href="contact.html?type=broker">Broker Partners</a></li>
+                        <li><a href="contact.html">Submit Inquiry</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <div class="contact-line">Phone: <a href="tel:+16464070347">+1 (646) 407 0347</a></div>
+                    <div class="contact-line">Email: <a href="mailto:info@helios1capital.com">info@helios1capital.com</a></div>
+                    <div class="contact-line">Hours: Mon – Fri: 9:00 AM – 6:00 PM EST</div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Helios1 Capital. All rights reserved.</p>
+                <div class="legal">
+                    <a href="privacy-policy.html">Privacy Policy &amp; Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Filter & Navigation Script -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Nav Toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileClose = document.getElementById('mobile-close');
+        if (navToggle && mobileNav) {
+            navToggle.addEventListener('click', () => mobileNav.classList.add('open'));
+            mobileClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+        }
+
+        // Elementor-style Category Filtering & Live Search
+        const pills = document.querySelectorAll('.cat-pill');
+        const cards = document.querySelectorAll('.blog-card');
+        const searchInput = document.getElementById('blogSearch');
+        const articleCount = document.getElementById('articleCount');
+        const emptyResults = document.getElementById('emptyResults');
+        const newsletterBanner = document.querySelector('.blog-newsletter-banner');
+        let currentCategory = 'all';
+
+        function filterArticles() {
+            const query = (searchInput.value || '').toLowerCase().trim();
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardCat = card.getAttribute('data-category');
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                const excerpt = card.querySelector('.card-excerpt').textContent.toLowerCase();
+                const matchesCat = (currentCategory === 'all' || cardCat === currentCategory);
+                const matchesSearch = !query || title.includes(query) || excerpt.includes(query);
+
+                if (matchesCat && matchesSearch) {
+                    card.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (articleCount) {
+                articleCount.textContent = `Showing ${visibleCount} article${visibleCount === 1 ? '' : 's'}`;
+            }
+
+            if (emptyResults) {
+                emptyResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+            }
+
+            // Hide newsletter banner if searching specific terms or empty
+            if (newsletterBanner) {
+                newsletterBanner.style.display = (currentCategory === 'all' && !query) ? 'grid' : 'none';
+            }
+        }
+
+        pills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                pills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                currentCategory = pill.getAttribute('data-category');
+                filterArticles();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterArticles);
+        }
+    </script>
+</body>
+</html>
